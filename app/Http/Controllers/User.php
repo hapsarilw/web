@@ -9,7 +9,7 @@ class User extends Controller
     //
     public function index(){
         if(!Session::get('login')){
-            return redirect('login')->with('alert','Kamu harus login dulu');
+            return redirect('home_user');
         }
         else{
             return view('user');
@@ -22,8 +22,8 @@ class User extends Controller
         $email = $request->email;
         $password = $request->password;
         $data = ModelUser::where('email',$email)->first();
-        if(count($data) > 0){ //apakah email tersebut ada atau tidak
-            if(Hash::check($password,$data->password)){
+        if(is_array($data) > 0){ //apakah email tersebut ada atau tidak
+            if($password == $data->password){
                 Session::put('name',$data->name);
                 Session::put('email',$data->email);
                 Session::put('login',TRUE);
@@ -34,7 +34,7 @@ class User extends Controller
             }
         }
         else{
-            return redirect('login')->with('alert','Password atau Email, Salahaa!');
+            return redirect('home_user');
         }
     }
     public function logout(){

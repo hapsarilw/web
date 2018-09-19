@@ -5,7 +5,7 @@
         <!-- Add Your Content Inside -->
         <div class="content">
             <!-- Remove This Before You Start -->
-            <h1>ADMIN - FlynBuy</h1>
+            <h1>ADMIN - FlyNBuy</h1>
             <p>Hallo, {{Session::get('name')}}. Apakabar?</p>
 
             <h2>* Email kamu : {{Session::get('email')}}</h2>

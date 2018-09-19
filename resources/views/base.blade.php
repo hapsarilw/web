@@ -13,7 +13,7 @@
     <!-- Canonical -->
     <link rel="canonical" href="">
 
-    <title>Admin Panel - FlynBuy</title>
+    <title>Latihan Laravel 5.4 - Anak IT</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
@@ -36,20 +36,26 @@
 <body>
 
 <div id="wrapper">
-    {{--<aside id="sideBar">--}}
-        {{--<ul class="main-nav">--}}
-            {{--<!-- Your Logo Or Site Name -->--}}
-            {{--<li class="nav-brand">--}}
-                {{--<a href="/">ADMIN - FLYNBUY</a>--}}
-            {{--</li>--}}
-            {{--<li>--}}
-                {{--<a href="#">- Baranag</a>--}}
-            {{--</li>--}}
-            {{--<li>--}}
-                {{--<a href="#">- Konfiirmasi Bayar</a>--}}
-            {{--</li>--}}
-        {{--</ul>--}}
-    {{--</aside>--}}
+    <aside id="sideBar">
+        <ul class="main-nav">
+            <!-- Your Logo Or Site Name -->
+            <li class="nav-brand">
+                <a href="/">ADMIN - Home</a>
+            </li>
+            <li>
+                <a href="#">- Barang</a>
+            </li>
+            <li>
+                <a href="#">- Konfirmasi Post</a>
+            </li>
+            <li>
+                <a href="#">- Konfirmasi Transaksi</a>
+            </li>
+            <li>
+                <a href="#">- Konfirmasi Customer Service</a>
+            </li>
+        </ul>
+    </aside>
 
     @yield('content') {{-- Semua file konten kita akan ada di bagian ini --}}
 

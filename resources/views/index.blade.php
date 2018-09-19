@@ -5,7 +5,7 @@
         <!-- Add Your Content Inside -->
         <div class="content">
             <!-- Remove This Before You Start -->
-            <h1>Admin Panel FLuNBuy -  DashBoard</h1>
+            <h1>Admin -  DashBoard</h1>
 
         </div>
         <!-- /.content -->
