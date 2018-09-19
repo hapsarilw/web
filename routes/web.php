@@ -11,7 +11,17 @@
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
-Route::resource('pegawai','UserController');
+Route::get('/halaman-kedua', function () {
+    return view('halamandua');
+});
+
+Route::get('/home_user', 'User@index');
+Route::get('/login', 'User@login');
+Route::post('/loginPost', 'User@loginPost');
+Route::get('/register', 'User@register');
+Route::post('/registerPost', 'User@registerPost');
+Route::get('/logout', 'User@logout');
