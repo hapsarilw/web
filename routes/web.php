@@ -25,3 +25,6 @@ Route::post('/registerPost', 'User@registerPost');
 Route::get('/logout', 'User@logout');
 
 Route::resource('barang','Barang');
+Route::resource('user','User');
+Route::resource('post_rq','PostRQ');
+Route::resource('transfer','Transfer');

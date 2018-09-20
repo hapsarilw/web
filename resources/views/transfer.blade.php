@@ -5,7 +5,7 @@
         <!-- Add Your Content Inside -->
         <div class="content">
             <!-- Remove This Before You Start -->
-            <h1>Tabel User</h1>
+            <h1>Tabel Transfer</h1>
             @if(Session::has('alert-success'))
                 <div class="alert alert-success">
                     <strong>{{ \Illuminate\Support\Facades\Session::get('alert-success') }}</strong>
@@ -16,11 +16,9 @@
                 <thead>
                 <tr>
                     <th>No.</th>
-                    <th>Nama</th>
-                    <th>Email</th>
-                    <th>is_admin</th>
-                    <th>Dibuat Tanggal</th>
-                    <th>Aksi</th>
+                    <th>Waktu</th>
+                    <th>Jumlah</th>
+                    <th>ID User</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -28,18 +26,9 @@
                 @foreach($data as $datas)
                     <tr>
                         <td>{{ $no++ }}</td>
-                        <td>{{ $datas->name }}</td>
-                        <td>{{ $datas->email }}</td>
-                        <td>{{ $datas->is_admin }}</td>
-                        <td>{{ $datas->created_at }}</td>
-                        <td>
-                            <form action="{{ route('user.destroy', $datas->id) }}" method="post">
-                                {{ csrf_field() }}
-                                {{ method_field('DELETE') }}
-                                <a href="{{ route('user.edit',$datas->id) }}" class=" btn btn-sm btn-primary">Edit</a>
-                                <button class="btn btn-sm btn-danger" type="submit" onclick="return confirm('Yakin ingin menghapus data?')">Delete</button>
-                            </form>
-                        </td>
+                        <td>{{ $datas->waktu }}</td>
+                        <td>{{ $datas->jumlah }}</td>
+                        <td>{{ $datas->id_user }}</td>
                     </tr>
                 @endforeach
                 </tbody>

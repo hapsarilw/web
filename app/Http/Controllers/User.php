@@ -8,12 +8,8 @@ class User extends Controller
 {
     //
     public function index(){
-        if(!Session::get('login')){
-            return redirect('home_user');
-        }
-        else{
-            return view('user');
-        }
+        $data = ModelUser::all();
+        return view('user',compact('data'));
     }
     public function login(){
         return view('login');
@@ -58,4 +54,36 @@ class User extends Controller
         $data->save();
         return redirect('login')->with('alert-success','Kamu berhasil Register');
     }
+    public function edit($id)
+    {
+        $data = ModelUSer::where('id',$id)->get();
+
+        return view('user_edit',compact('data'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        $data = ModelUser::where('id',$id)->first();
+        $data->name = $request->name;
+        $data->email = $request->email;
+        $data->password = $request->password;
+        //Ganti tinyint jd string disini
+        $data->is_admin = $request->is_admin;
+        $data->save();
+        return redirect()->route('user.index')->with('alert-success','Data berhasil diubah!');
+    }
+    public function destroy($id)
+    {
+        $data = ModelUser::where('id',$id)->first();
+        $data->delete();
+        return redirect()->route('user.index')->with('alert-success','Data berhasi dihapus!');
+    }
+
 }

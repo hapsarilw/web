@@ -13,7 +13,7 @@
     <!-- Canonical -->
     <link rel="canonical" href="">
 
-    <title>Latihan Laravel 5.4 - Anak IT</title>
+    <title>Admin Panel - FlyNBuy</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
@@ -43,11 +43,14 @@
                 <a href="/">ADMIN - Home</a>
             </li>
             <li>
-                <a href="#">- Barang</a>
+                <a href="/user">- User</a>
             </li>
             <li>
-                <a href="#">- Konfirmasi Post</a>
+                <a href="/barang">- Barang</a>
             </li>
+            {{--<li>--}}
+                {{--<a href="#">- Konfirmasi Post Requester</a>--}}
+            {{--</li>--}}
             <li>
                 <a href="#">- Konfirmasi Transaksi</a>
             </li>

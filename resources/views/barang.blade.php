@@ -12,17 +12,18 @@
                 </div>
             @endif
             <hr>
-            <table class="table table-bordered">
+            <table class="table table-bordered" style="width:100%">
                 <thead>
                 <tr>
-                    <th>No.</th>
-                    <th>Nama</th>
-                    <th>Deskripsi</th>
-                    <th>Unit</th>
-                    <th>Harga</th>
-                    <th>Foto</th>
-                    <th>Sttaus Pecah Belah</th>
-                    <th>Dibuat Tanggal</th>
+                    <th style="width:5%">No.</th>
+                    <th style="width:10%">Nama</th>
+                    <th style="width:30%">Deskripsi</th>
+                    <th style="width:10%">Unit</th>
+                    <th style="width:10%">Harga</th>
+                    <th style="width:10%">Foto</th>
+                    <th style="width:5%">Sttaus Pecah Belah</th>
+                    <th style="width:10%">Dibuat Tanggal</th>
+                    <th style="width:20%">Aksi</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -34,16 +35,15 @@
                         <td>{{ $datas->deskripsi }}</td>
                         <td>{{ $datas->unit }}</td>
                         <td>{{ $datas->harga }}</td>
-                        <td>{{ $datas->foto }}</td>
+                        <td><img width="100" src="<?php echo $datas->foto; ?>" /></td>
                         <td>{{ $datas->statusPecahBelah }}</td>
                         <td>{{ $datas->created_at }}</td>
                         <td>
-                            {{--<form action="{{ route('kontak.destroy', $datas->id) }}" method="post">--}}
-                                {{--{{ csrf_field() }}--}}
-                                {{--{{ method_field('DELETE') }}--}}
-                                {{--<a href="{{ route('kontak.edit',$datas->id) }}" class=" btn btn-sm btn-primary">Edit</a>--}}
-                                {{--<button class="btn btn-sm btn-danger" type="submit" onclick="return confirm('Yakin ingin menghapus data?')">Delete</button>--}}
-                            {{--</form>--}}
+                            <form action="{{ route('barang.destroy', $datas->id) }}" method="post">
+                                {{ csrf_field() }}
+                                {{ method_field('DELETE') }}
+                                <button class="btn btn-sm btn-danger" type="submit" onclick="return confirm('Yakin ingin menghapus data?')">Delete</button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach
