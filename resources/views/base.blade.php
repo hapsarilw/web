@@ -22,6 +22,7 @@
 
     <!-- Main Styles CSS -->
     <link href="/assets/css/main.css" rel="stylesheet"> {{-- ini cara memanggil css dari folder assets -> css --}}
+    <link href="/assets/css/base.css" rel="stylesheet">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -42,20 +43,24 @@
             <li class="nav-brand">
                 <a href="/">ADMIN - Home</a>
             </li>
-            <li>
-                <a href="/user">- User</a>
+            <li><a href="#">User</a>
+                <ul class="dropdown">
+                    <li><a href="/tb_user">Tabel User</a></li>
+                    <li><a href="/register">Tambah Pegawai</a></li>
+                    <li><a href="#">Sub-3</a></li>
+                </ul>
             </li>
             <li>
-                <a href="/barang">- Barang</a>
+                <a href="/barang">Barang</a>
             </li>
             {{--<li>--}}
                 {{--<a href="#">- Konfirmasi Post Requester</a>--}}
             {{--</li>--}}
             <li>
-                <a href="#">- Konfirmasi Transaksi</a>
+                <a href="#">Konfirmasi Transaksi</a>
             </li>
             <li>
-                <a href="#">- Konfirmasi Customer Service</a>
+                <a href="#">Konfirmasi Customer Service</a>
             </li>
             <li style="bottom: 0; position: fixed; overlay: none;">
                 <a  href="/logout">Logout</a>

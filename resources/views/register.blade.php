@@ -20,7 +20,7 @@
             <form action="{{ url('/registerPost') }}" method="post">
                 {{ csrf_field() }}
                 <div class="form-group">
-                    <label for="alamat">Name:</label>
+                    <label for="name">Name:</label>
                     <input type="text"  class="form-control" id="name" name="name">
                 </div>
                 <div class="form-group">
@@ -28,21 +28,21 @@
                     <input type="email" class="form-control" id="email" name="email">
                 </div>
                 <div class="form-group">
-                    <label for="alamat">Password:</label>
+                    <label for="password">Password:</label>
                     <input type="password" class="form-control" id="password" name="password">
                 </div>
                 <div class="form-group">
-                    <label for="alamat">Password Confirmation:</label>
+                    <label for="password">Password Confirmation:</label>
                     <input type="password" class="form-control" id="confirmation" name="confirmation">
                 </div>
                 <div class="form-group">
                     <label for="Jenis Pegawai">Pilih Pegawai:</label>
-                    <select class="form-control" id="jenis-pegawai">
-                        <option>--Pilih Pegawai--</option>
-                        <option>Transaksi</option>
-                        <option>Keuangan</option>
-                        <option>Customer Service</option>
-                    </select>
+                    <div class="form-group">
+                        <input type="radio" name="is_admin" value="1">Admin<br>
+                        <input type="radio" name="is_admin" value="2">Transaksi<br>
+                        <input type="radio" name="is_admin" value="3">Keuangan<br>
+                        <input type="radio" name="is_admin" value="4">Customer Service<br>
+                    </div>
                 </div>
 
                 <div class="form-group">

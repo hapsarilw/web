@@ -56,6 +56,7 @@ class RegisterController extends Controller
         ]);
     }
 
+
     /**
      * Create a new user instance after a valid registration.
      *
@@ -66,9 +67,9 @@ class RegisterController extends Controller
     {
         return User::create([
             'name' => $data['name'],
-            'username' => $data['username'],
             'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'password' => $data['password'],
+            'is_admin' => $data['is_admin'],
             'token' => str_random(40) . time(),
         ]);
         $user->notify(new UserActivate($user));

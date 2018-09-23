@@ -20,8 +20,9 @@ class UsersSeeder extends Seeder
             DB::table('users')->insert([ //mengisi datadi database
                 'name' => $faker->name,
                 'email' => $faker->unique()->email, //email unique sehingga tidak ada yang sama
-                'is_admin' => $faker->phoneNumber,
+                'is_admin' => $faker->numberBetween(0, 4),
                 'password' => $faker->password,
+                'created_at' => $faker->date()
             ]);
         }
     }

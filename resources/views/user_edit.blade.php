@@ -2,7 +2,7 @@
 @section('content')
 
     <!-- Main Section -->
-    <section class="main-section">s
+    <section class="main-section">
         <!-- Add Your Content Inside -->
         <div class="content">
             <!-- Remove This Before You Start -->
@@ -24,20 +24,22 @@
                         <label for="admin">Tipe User:</label>
                         <hr>
                         <input type="radio" name="is_admin"
-                               <?php if (isset($datas->is_admin) && $datas->is_admin=="Pengguna") echo "checked";?>
-                               value="Pengguna">Pengguna
+                               <?php if (isset($datas->is_admin) && $datas->is_admin=="0") echo "checked";?>
+                               value="0">Pengguna
                         <input type="radio" name="is_admin"
-                               <?php if (isset($datas->is_admin) && $datas->is_admin=="Admin") echo "checked";?>
-                               value="Admin">Admin
+                               <?php if (isset($datas->is_admin) && $datas->is_admin=="1") echo "checked";?>
+                               value="1">Admin
                         <input type="radio" name="is_admin"
-                               <?php if (isset($datas->is_admin) && $datas->is_admin=="Transaksi") echo "checked";?>
-                               value="Transaksi">Transaksi
+                               <?php if (isset($datas->is_admin) && $datas->is_admin=="2") echo "checked";?>
+                               value="2">Transaksi
                         <input type="radio" name="is_admin"
-                               <?php if (isset($datas->is_admin) && $datas->is_admin=="Keuangan") echo "checked";?>
-                               value="Keuangan">Keuangan
+                               <?php if (isset($datas->is_admin) && $datas->is_admin=="3") echo "checked";?>
+                               value="3">Keuangan
                         <input type="radio" name="is_admin"
-                               <?php if (isset($datas->is_admin) && $datas->is_admin=="Customer Service") echo "checked";?>
-                               value="Customer Service">Customer Service
+                               <?php if (isset($datas->is_admin) && $datas->is_admin=="4") echo "checked";?>
+                               value="4">Customer Service
+
+                        <?php echo $datas->is_admin?>
 
 
                     </div>

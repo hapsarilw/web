@@ -28,5 +28,6 @@ Route::get('/logout', 'User@logout');
 
 Route::resource('barang','Barang');
 Route::resource('user','User');
+Route::resource('tb_user','TbUser');
 Route::resource('post_rq','PostRQ');
 Route::resource('transfer','Transfer');
