@@ -6,20 +6,29 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 class User extends Controller
 {
-    //
+    //Masuk ke halamanan dashboard admin
     public function index(){
-        $data = ModelUser::all();
-        return view('user',compact('data'));
+        //Apabila tidak memiliki session login (blm login)
+        if(!Session::get('login')){
+            return redirect('login')->with('alert','Kamu harus login dulu');
+        }
+        else{
+            return view('user');
+        }
     }
     public function login(){
         return view('login');
     }
+
+    //Cek apakah email, pass sudah  ada di database
     public function loginPost(Request $request){
         $email = $request->email;
         $password = $request->password;
         $data = ModelUser::where('email',$email)->first();
-        if(is_array($data) > 0){ //apakah email tersebut ada atau tidak
-            if($password == $data->password){
+        //Email dan password ada di database
+        if(!empty($data)){ //apakah email tersebut ada atau tidak
+            //Maka session akan di set(nama, email, password, statusLogin)
+            if(Hash::check($password,$data->password)){
                 Session::put('name',$data->name);
                 Session::put('email',$data->email);
                 Session::put('login',TRUE);
@@ -30,7 +39,7 @@ class User extends Controller
             }
         }
         else{
-            return redirect('home_user');
+            return redirect('login')->with('alert','Password atau Email, Salahaa!');
         }
     }
     public function logout(){
@@ -40,7 +49,10 @@ class User extends Controller
     public function register(Request $request){
         return view('register');
     }
+
+    //registrasi dan masukin data
     public function registerPost(Request $request){
+        //Fungsi untuk validasi
         $this->validate($request, [
             'name' => 'required|min:4',
             'email' => 'required|min:4|email|unique:users',

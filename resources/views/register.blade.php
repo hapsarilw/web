@@ -7,6 +7,7 @@
             <!-- Remove This Before You Start -->
             <h1>FlynBuy -  Register Pegawai</h1>
             <hr>
+            {{--Menampilkan Hasil Validasi--}}
             @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>

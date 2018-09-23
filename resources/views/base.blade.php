@@ -57,6 +57,9 @@
             <li>
                 <a href="#">- Konfirmasi Customer Service</a>
             </li>
+            <li style="bottom: 0; position: fixed; overlay: none;">
+                <a  href="/logout">Logout</a>
+            </li>
         </ul>
     </aside>
 

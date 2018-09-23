@@ -12,11 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('login');
 });
 Route::get('/halaman-kedua', function () {
     return view('halamandua');
 });
+
+//ROUTE LOGIN REGISTER DAN LOGOUT
 Route::get('/home_user', 'User@index');
 Route::get('/login', 'User@login');
 Route::post('/loginPost', 'User@loginPost');

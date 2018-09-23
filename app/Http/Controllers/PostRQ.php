@@ -15,7 +15,7 @@ class PostRQ extends Controller
     public function index()
     {
         $data = ModelPostRQ::all();
-        return view('kontak',compact('data'));
+        return view('post_rq',compact('data'));
     }
 
     /**
