@@ -1,5 +1,6 @@
 @extends('base')
 @section('content')
+
     <!-- Main Section -->
     <section class="main-section">
         <!-- Add Your Content Inside -->
@@ -26,11 +27,15 @@
                 <tbody>
                 @php $no = 1; @endphp
                 @foreach($data as $datas)
+
                     <tr>
                         <td>{{ $no++ }}</td>
                         <td>{{ $datas->name }}</td>
                         <td>{{ $datas->email }}</td>
-                        <td>{{ $datas->is_admin }}</td>
+                        <td>@php
+                                echo App\Http\Controllers\User::displayPegawai($datas->is_admin);
+                            @endphp
+                        </td>
                         <td>{{ $datas->created_at }}</td>
                         <td>
                             <form action="{{ route('user.destroy', $datas->id) }}" method="post">

@@ -29,6 +29,7 @@
                 <tbody>
                 @php $no = 1; @endphp
                 @foreach($data as $datas)
+
                     <tr>
                         <td>{{ $no++ }}</td>
                         <td>{{ $datas->nama }}</td>

@@ -99,4 +99,21 @@ class User extends Controller
         return redirect()->route('user.index')->with('alert-success','Data berhasi dihapus!');
     }
 
+    public static function displayPegawai($data){
+        if($data=="0"){
+            return "Pengguna";
+        }
+        else if($data=="1"){
+            return "Admin";
+        }
+        else if($data=="2"){
+            return "Transaksi";
+        }
+        else if($data=="3"){
+            return "Keuangan";
+        }
+        else if($data=="4"){
+            return "Customer Service";
+        }
+    }
 }

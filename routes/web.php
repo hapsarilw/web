@@ -31,3 +31,5 @@ Route::resource('user','User');
 Route::resource('tb_user','TbUser');
 Route::resource('post_rq','PostRQ');
 Route::resource('transfer','Transfer');
+
+Route::post('/displayPegawai/{id}', 'User@displayPegawai');
