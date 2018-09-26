@@ -15,7 +15,7 @@ class CreateRequesterTable extends Migration
     {
         Schema::create('requester', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_user');
+            $table->integer('id_pengguna');
             $table->integer('actRequester');
             $table->timestamps();
         });

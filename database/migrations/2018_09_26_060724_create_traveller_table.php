@@ -15,7 +15,7 @@ class CreateTravellerTable extends Migration
     {
         Schema::create('traveller', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_user');
+            $table->integer('id_pengguna');
             $table->integer('actTraveller');
             $table->timestamps();
         });

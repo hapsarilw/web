@@ -17,8 +17,8 @@ class TravellerSeeder extends Seeder
 
         for ($i = 0; $i < $limit; $i++) {
             DB::table('traveller')->insert([ //mengisi datadi database
-                'id_user' => $faker->numberBetween(1,2),
-                'actTraveller' => $faker->numberBetween(1,2),
+                'id_pengguna' => $faker->unique()->numberBetween(6,15),
+                'actTraveller' => $faker->unique()->numberBetween(1,5),
             ]);
         }
     }

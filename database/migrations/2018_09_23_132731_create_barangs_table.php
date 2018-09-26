@@ -16,6 +16,8 @@ class CreateBarangsTable extends Migration
         Schema::create('barangs', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama');
+            $table->integer('unit');
+            $table->string('deskripsi');
             $table->enum('statusPecahBelah',['Ya', 'Tidak'] )->default('Tidak');
             $table->tinyInteger('berat')->default('1');
             $table->float('harga', 8,3);

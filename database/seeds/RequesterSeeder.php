@@ -18,8 +18,8 @@ class RequesterSeeder extends Seeder
 
         for ($i = 0; $i < $limit; $i++) {
             DB::table('requester')->insert([ //mengisi datadi database
-                'id_user' => $faker->numberBetween(1,2),
-                'actRequester' => $faker->numberBetween(1,2),
+                'id_pengguna' => $faker->unique()->numberBetween(6,15),
+                'actRequester' => $faker->unique()->numberBetween(1,5),
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s')
             ]);
         }

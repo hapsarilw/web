@@ -14,13 +14,30 @@ class UsersSeeder extends Seeder
         //
         $faker = Faker\Factory::create(); //import library faker
 
-        $limit = 5; //batasan berapa banyak data
+        $limit1 = 4; //batasan berapa banyak data
+        $limit2 = 10;
 
-        for ($i = 0; $i < $limit; $i++) {
+        DB::table('users')->insert([ //mengisi datadi database
+            'name' => $faker->name,
+            'email' => $faker->unique()->email, //email unique sehingga tidak ada yang sama
+            'is_admin' => 1,
+            'password' => $faker->word,
+            'created_at' => $faker->date()
+        ]);
+        for ($i = 0; $i < $limit1; $i++) {
             DB::table('users')->insert([ //mengisi datadi database
                 'name' => $faker->name,
                 'email' => $faker->unique()->email, //email unique sehingga tidak ada yang sama
-                'is_admin' => $faker->numberBetween(0, 4),
+                'is_admin' => $faker->numberBetween(2, 4),
+                'password' => $faker->word,
+                'created_at' => $faker->date()
+            ]);
+        }
+        for ($i = 0; $i < $limit2; $i++) {
+            DB::table('users')->insert([ //mengisi datadi database
+                'name' => $faker->name,
+                'email' => $faker->unique()->email, //email unique sehingga tidak ada yang sama
+                'is_admin' => 0,
                 'password' => $faker->word,
                 'created_at' => $faker->date()
             ]);

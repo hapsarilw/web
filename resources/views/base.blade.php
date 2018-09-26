@@ -46,6 +46,7 @@
             <li><a href="#">User</a>
                 <ul class="dropdown">
                     <li><a href="/tb_user">User</a></li>
+                    <li><a href="/pengguna">Pengguna</a></li>
                     <li><a href="/traveller">Traveller</a></li>
                     <li><a href="/requester">Requester</a></li>
                     <li><a href="/register">TAMBAH Pegawai</a></li>

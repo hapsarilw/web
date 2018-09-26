@@ -5,7 +5,7 @@
         <!-- Add Your Content Inside -->
         <div class="content">
             <!-- Remove This Before You Start -->
-            <h1>Anak IT -  Table Kontak</h1>
+            <h1>Aktifitas Traveller</h1>
             @if(Session::has('alert-success'))
                 <div class="alert alert-success">
                     <strong>{{ \Illuminate\Support\Facades\Session::get('alert-success') }}</strong>
@@ -19,7 +19,8 @@
                     <th>ID Traveller</th>
                     <th>Aksi</th>
                     <th>Negara</th>
-                    <th>Post Requester</th>
+                    <th>Link Post Requester</th>
+                    <th>Tanggal Aktifitas</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -27,10 +28,16 @@
                 @foreach($data as $datas)
                     <tr>
                         <td>{{ $no++ }}</td>
-                        <td>{{ $datas->id_traveller }}</td>
+                        <td>{{ $datas->id_traveller}}</td>
                         <td>{{ $datas->aksi }}</td>
                         <td>{{ $datas->negara }}</td>
-                        <td>{{ $datas->postRequester }}</td>
+                        <td>@if($datas->aksi=="Setujui Pembelian")
+                                <button type="button" class="btn btn-info">Lihat Post Barang</button>
+                            @else
+                                -
+                            @endif
+                        </td>
+                        <td>{{ $datas->tgl }}</td>
                     </tr>
                 @endforeach
                 </tbody>

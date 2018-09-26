@@ -16,7 +16,7 @@ class CreatePostRqTable extends Migration
         Schema::create('post_rq', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_barang');
-            $table->integer('id_user');
+            $table->integer('id_pengguna');
             $table->integer('id_pegawai');
             $table->date('waktuPost');
             $table->integer('jumlah');

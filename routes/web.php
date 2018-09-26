@@ -35,5 +35,6 @@ Route::resource('traveller','Traveller');
 Route::resource('act_traveller','ActTraveller');
 Route::resource('requester','Requester');
 Route::resource('act_requester','ActRequester');
+Route::resource('pengguna','Pengguna');
 
 Route::post('/displayPegawai/{id}', 'User@displayPegawai');

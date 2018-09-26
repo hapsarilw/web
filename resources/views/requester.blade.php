@@ -26,8 +26,8 @@
                 @foreach($data as $datas)
                     <tr>
                         <td>{{ $no++ }}</td>
-                        <td>{{ $datas->id_user }}</td>
-                        <td>{{ $datas->act_requester }}</td>
+                        <td>{{ $datas->id_pengguna }}</td>
+                        <td>{{ $datas->actRequester }}</td>
                         <td>{{ $datas->created_at }}</td>
                     </tr>
                 @endforeach
