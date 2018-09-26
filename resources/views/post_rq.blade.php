@@ -17,13 +17,11 @@
                 <tr>
                     <th>No.</th>
                     <th>ID Barang</th>
-                    <th>ID User</th>
+                    <th>ID Pengguna</th>
                     <th>ID Pegawai</th>
-                    <th>Waktu Post</th>
-                    <th>Jumlah</th>
                     <th>Status Post</th>
                     <th>Tanggal Berakhir</th>
-                    <th>Status Post</th>
+                    <th>Aksi</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -32,13 +30,24 @@
                     <tr>
                         <td>{{ $no++ }}</td>
                         <td>{{ $datas->id_barang }}</td>
-                        <td>{{ $datas->id_user }}</td>
+                        <td>{{ $datas->id_pengguna }}</td>
                         <td>{{ $datas->id_pegawai }}</td>
-                        <td>{{ $datas->waktuPost }}</td>
-                        <td>{{ $datas->jumlah }}</td>
                         <td>{{ $datas->statusPost }}</td>
-                        <td>{{ $datas->tanggalBerakhir }}</td>
+                        <td>{{ $datas->tglBerakhir }}</td>
                         <td>
+                            @if ($datas->statusPost === "Belum Konfirmasi")
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect1">Posting ?</label>
+                                    <select class="form-control" id="exampleFormControlSelect1">
+                                        <option>Ya</option>
+                                        <option>Tidak</option>
+                                    </select><br>
+                                    <button class="btn btn-sm btn-success" type="submit" onclick="return confirm('Yakin ingin konfirmasi?')">Simpan</button>
+                                </div>
+                            @else
+                                -
+                            @endif
+
                             {{--<form action="{{ route('post_rq.updateStatus', $datas->id) }}" method="post">--}}
                                 {{--{{ csrf_field() }}--}}
                                 {{--{{ method_field('UPDATE') }}--}}

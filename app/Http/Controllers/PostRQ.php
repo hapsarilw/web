@@ -83,4 +83,8 @@ class PostRQ extends Controller
     {
         //
     }
+    public function updateStatus($id)
+    {
+        //
+    }
 }

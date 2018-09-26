@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ActRequesterSeeder::class);
         $this->call(UsersSeeder::class);
         $this->call(PenggunaSeeder::class);
+        $this->call(PostRQSeeder::class);
 
     }
 }

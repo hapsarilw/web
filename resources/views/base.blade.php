@@ -54,7 +54,7 @@
             </li>
             <li><a href="/barang">Barang</a></li>
             <li>
-                <a href="#">Konfirmasi Post Requester</a>
+                <a href="/post_rq">Konfirmasi Post Requester</a>
             </li>
             <li>
                 <a href="#">Konfirmasi Transaksi</a>

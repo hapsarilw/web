@@ -14,7 +14,7 @@ class PenggunaSeeder extends Seeder
         //
         $faker = Faker\Factory::create(); //import library faker
 
-        $limit = 5; //batasan berapa banyak data
+        $limit = 10; //batasan berapa banyak data
 
         for ($i = 0; $i < $limit; $i++) {
             DB::table('pengguna')->insert([ //mengisi datadi database

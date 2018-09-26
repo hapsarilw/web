@@ -18,8 +18,6 @@ class CreatePostRqTable extends Migration
             $table->integer('id_barang');
             $table->integer('id_pengguna');
             $table->integer('id_pegawai');
-            $table->date('waktuPost');
-            $table->integer('jumlah');
             $table->string('statusPost');
             $table->date('tglBerakhir');
             $table->timestamps();
