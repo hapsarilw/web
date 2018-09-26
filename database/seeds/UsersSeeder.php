@@ -21,7 +21,7 @@ class UsersSeeder extends Seeder
                 'name' => $faker->name,
                 'email' => $faker->unique()->email, //email unique sehingga tidak ada yang sama
                 'is_admin' => $faker->numberBetween(0, 4),
-                'password' => $faker->password,
+                'password' => $faker->word,
                 'created_at' => $faker->date()
             ]);
         }

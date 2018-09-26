@@ -17,6 +17,7 @@ class CreateActTravellerTable extends Migration
             $table->increments('id');
             $table->integer('id_traveller');
             $table->enum('aksi', ['Pergi', 'Pulang', 'Setujui Pembelian']);
+            $table->date('tgl');
             $table->string('negara', ['Thailand', 'Jepang', 'Korea', 'Amerika', 'Jerman', 'Swiss', 'Paris']);
             $table->string('postRequester');
             $table->timestamps();

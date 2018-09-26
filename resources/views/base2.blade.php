@@ -24,7 +24,7 @@
     <link href="/assets/css/main.css" rel="stylesheet"> {{-- ini cara memanggil css dari folder assets -> css --}}
     <link href="/assets/css/base.css" rel="stylesheet">
 
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,35 +37,6 @@
 <body>
 
 <div id="wrapper">
-    <aside id="sideBar">
-        <ul class="main-nav">
-            <!-- Your Logo Or Site Name -->
-            <li class="nav-brand">
-                <a href="/">ADMIN - Home</a>
-            </li>
-            <li><a href="#">User</a>
-                <ul class="dropdown">
-                    <li><a href="/tb_user">User</a></li>
-                    <li><a href="/traveller">Traveller</a></li>
-                    <li><a href="/requester">Requester</a></li>
-                    <li><a href="/register">TAMBAH Pegawai</a></li>
-                </ul>
-            </li>
-            <li><a href="/barang">Barang</a></li>
-            <li>
-                <a href="#">Konfirmasi Post Requester</a>
-            </li>
-            <li>
-                <a href="#">Konfirmasi Transaksi</a>
-            </li>
-            <li>
-                <a href="#">Konfirmasi Customer Service</a>
-            </li>
-            <li style="bottom: 0; position: fixed; overlay: none;">
-                <a  href="/logout">Logout</a>
-            </li>
-        </ul>
-    </aside>
 
     @yield('content') {{-- Semua file konten kita akan ada di bagian ini --}}
 

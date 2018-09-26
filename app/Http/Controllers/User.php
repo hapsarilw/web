@@ -28,7 +28,7 @@ class User extends Controller
         //Email dan password ada di database
         if(!empty($data)){ //apakah email tersebut ada atau tidak
             //Maka session akan di set(nama, email, password, statusLogin)
-            if(Hash::check($password,$data->password)){
+            if($password == $data->password){
                 Session::put('name',$data->name);
                 Session::put('email',$data->email);
                 Session::put('login',TRUE);

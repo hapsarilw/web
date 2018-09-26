@@ -16,7 +16,7 @@ class CreateModelUsersTable extends Migration
             $table->string('name');
             $table->string('email',100)->unique();
             $table->string('password');
-            $table->tinyInteger('role')->default('0');
+            $table->tinyInteger('is_admin')->default('0');
             $table->rememberToken();
             $table->timestamps();
         });
