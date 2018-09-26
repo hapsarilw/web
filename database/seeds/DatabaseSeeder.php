@@ -14,5 +14,7 @@ class DatabaseSeeder extends Seeder
 //        $this->call(BarangsSeeder::class);
         $this->call(TravellerSeeder::class);
         $this->call(ActivityTravellerSeeder::class);
+        $this->call(RequesterSeeder::class);
+        $this->call(ActRequesterSeeder::class);
     }
 }

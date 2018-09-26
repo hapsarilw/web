@@ -46,16 +46,14 @@
             <li><a href="#">User</a>
                 <ul class="dropdown">
                     <li><a href="/tb_user">Tabel User</a></li>
+                    <li><a href="/traveller">Tabel Traveller</a></li>
                     <li><a href="/register">Tambah Pegawai</a></li>
-                    <li><a href="#">Sub-3</a></li>
                 </ul>
             </li>
+            <li><a href="/barang">Barang</a></li>
             <li>
-                <a href="/barang">Barang</a>
+                <a href="#">- Konfirmasi Post Requester</a>
             </li>
-            {{--<li>--}}
-                {{--<a href="#">- Konfirmasi Post Requester</a>--}}
-            {{--</li>--}}
             <li>
                 <a href="#">Konfirmasi Transaksi</a>
             </li>
