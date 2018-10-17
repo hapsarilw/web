@@ -6,7 +6,7 @@
         <!-- Add Your Content Inside -->
         <div class="content">
             <!-- Remove This Before You Start -->
-            <h1>Tabel User</h1>
+            <h1>Data Pengguna dan Karyawan</h1>
             @if(Session::has('alert-success'))
                 <div class="alert alert-success">
                     <strong>{{ \Illuminate\Support\Facades\Session::get('alert-success') }}</strong>
@@ -38,12 +38,17 @@
                         </td>
                         <td>{{ $datas->created_at }}</td>
                         <td>
-                            <form action="{{ route('user.destroy', $datas->id) }}" method="post">
-                                {{ csrf_field() }}
-                                {{ method_field('DELETE') }}
-                                <a href="{{ route('user.edit',$datas->id) }}" class=" btn btn-sm btn-primary">Edit</a>
-                                <button class="btn btn-sm btn-danger" type="submit" onclick="return confirm('Yakin ingin menghapus data?')">Delete</button>
-                            </form>
+                            @if($datas->is_admin!="0")
+                                <form action="{{ route('user.destroy', $datas->id) }}" method="post">
+                                    {{ csrf_field() }}
+                                    {{ method_field('DELETE') }}
+                                    <a href="{{ route('user.edit',$datas->id) }}" class=" btn btn-sm btn-primary">Edit</a>
+                                    <button class="btn btn-sm btn-danger" type="submit" onclick="return confirm('Yakin ingin menghapus data?')">Delete</button>
+                                </form>
+                            @else
+
+                            @endif
+
                         </td>
                     </tr>
                 @endforeach

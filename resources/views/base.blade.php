@@ -10,6 +10,7 @@
     <link rel="author" href="https://plus.google.com/+Scoopthemes">
     <link rel="publisher" href="https://plus.google.com/+Scoopthemes">
 
+
     <!-- Canonical -->
     <link rel="canonical" href="">
 
@@ -18,7 +19,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <!-- font Awesome CSS -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Main Styles CSS -->
     <link href="/assets/css/main.css" rel="stylesheet"> {{-- ini cara memanggil css dari folder assets -> css --}}
@@ -43,25 +44,53 @@
             <li class="nav-brand">
                 <a href="/">ADMIN - Home</a>
             </li>
-            <li><a href="#">User</a>
+            <li><a href="#">User &nbsp<i class="fa fa-caret-right" aria-hidden="true"></i> </a>
                 <ul class="dropdown">
-                    <li><a href="/tb_user">User</a></li>
-                    <li><a href="/pengguna">Pengguna</a></li>
-                    <li><a href="/traveller">Traveller</a></li>
-                    <li><a href="/requester">Requester</a></li>
-                    <li><a href="/register">TAMBAH Pegawai</a></li>
+                    <li><a href="/tb_user">Data Pengguna & Karyawan</a></li>
+                    <li><a href="/pengguna">Profil Penggguna</a></li>
                 </ul>
             </li>
-            <li><a href="/barang">Barang</a></li>
-            <li>
-                <a href="/post_rq">Konfirmasi Post Requester</a>
+            <li><a href="/register">Tambah Pegawai &nbsp<i class="fa fa-caret-right" aria-hidden="true"></i></a></li>
+            <li><a href="#">Requester</a>
+                <ul class="dropdown">
+                    <li><a href="/requester">Requester</a></li>
+                    <li><a href="/act_requester">Aktifitas Requester</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Traveller &nbsp<i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                <ul class="dropdown">
+                    <li><a href="/traveller">Traveller</a></li>
+                    <li><a href="/act_traveller">Aktifitas Traveller</a></li>
+                </ul>
+            </li>
+            <li><a href="/barang">Data Barang</a></li>
+            <li><a href="#">Transaksi &nbsp<i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                <ul class="dropdown">
+                    <a href="/post_rq">Cek Post Baru</a>
+                </ul>
+            </li>
+            <li><a href="#">Keuangan &nbsp<i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                <ul class="dropdown">
+                    <li>Cek Transfer</li>
+                    <li>Cek Receive</li>
+                </ul>
+            </li>
+            <li><a href="#">Customer Service &nbsp<i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                <ul class="dropdown">
+                    <li>Komplain Requester</li>
+                    <li>Komplain Traveller</li>
+                    <li>Review</li>
+                </ul>
             </li>
             <li>
-                <a href="#">Konfirmasi Transaksi</a>
+
             </li>
-            <li>
-                <a href="#">Konfirmasi Customer Service</a>
-            </li>
+            {{--<li>--}}
+                {{--<a href="#">Konfirmasi Transaksi</a>--}}
+            {{--</li>--}}
+            {{--<li>--}}
+                {{--<a href="#">Konfirmasi Customer Service</a>--}}
+            {{--</li>--}}
             <li style="bottom: 0; position: fixed; overlay: none;">
                 <a  href="/logout">Logout</a>
             </li>

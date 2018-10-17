@@ -50,6 +50,7 @@ class Barang extends Controller
     public function show($id)
     {
         //
+        return view('show_barang', ['barang' => ModelBarang::findOrFail($id)],compact('barang'));
     }
 
     /**

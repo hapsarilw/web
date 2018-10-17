@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\ModelBarang;
 use App\ModelRequester;
 use Illuminate\Http\Request;
 
@@ -18,6 +19,8 @@ class Requester extends Controller
         $data = ModelRequester::all();
         return view('requester',compact('data'));
     }
+
+
 
     /**
      * Show the form for creating a new resource.

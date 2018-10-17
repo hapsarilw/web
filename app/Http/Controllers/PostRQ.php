@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\ModelPostRQ;
+use App\ModelBarang;
 use Illuminate\Http\Request;
 
 class PostRQ extends Controller
@@ -45,9 +46,10 @@ class PostRQ extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function showBarang($id)
     {
-        //
+        $data = ModelBarang::find($id);
+        return view('show_barang', compact('barang'));
     }
 
     /**

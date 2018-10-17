@@ -39,3 +39,5 @@ Route::resource('pengguna','Pengguna');
 Route::resource('post_rq','PostRQ');
 
 Route::post('/displayPegawai/{id}', 'User@displayPegawai');
+
+Route::get('show_barang/{id}', 'Barang@show')->name('show_barang');

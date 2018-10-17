@@ -1,4 +1,5 @@
 @extends('base')
+
 @section('content')
     <!-- Main Section -->
     <section class="main-section">
@@ -16,9 +17,9 @@
                 <thead>
                 <tr>
                     <th>No.</th>
-                    <th>ID Barang</th>
-                    <th>ID Pengguna</th>
-                    <th>ID Pegawai</th>
+                    <th>Link Barang</th>
+                    <th>Nama Pengguna</th>
+                    <th>Nama Pegawai</th>
                     <th>Status Post</th>
                     <th>Tanggal Berakhir</th>
                     <th>Aksi</th>
@@ -29,7 +30,9 @@
                 @foreach($data as $datas)
                     <tr>
                         <td>{{ $no++ }}</td>
-                        <td>{{ $datas->id_barang }}</td>
+                        <td>
+                            <a target="_blank" href="{{ url('show_barang/' . $datas->id_barang) }}">Link Barang</a>
+                        </td>
                         <td>{{ $datas->id_pengguna }}</td>
                         <td>{{ $datas->id_pegawai }}</td>
                         <td>{{ $datas->statusPost }}</td>
