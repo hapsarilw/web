@@ -62,7 +62,7 @@ class User extends Controller
         $data =  new ModelUser();
         $data->name = $request->name;
         $data->email = $request->email;
-        $data->password = bcrypt($request->password);
+        $data->password = $request->password;
         $data->is_admin = $request->is_admin;
         $data->save();
         return redirect('login')->with('alert-success','Kamu berhasil Register');

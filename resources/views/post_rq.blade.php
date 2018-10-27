@@ -39,24 +39,12 @@
                         <td>{{ $datas->tglBerakhir }}</td>
                         <td>
                             @if ($datas->statusPost === "Belum Konfirmasi")
-                                <div class="form-group">
-                                    <label for="exampleFormControlSelect1">Posting ?</label>
-                                    <select class="form-control" id="exampleFormControlSelect1">
-                                        <option>Ya</option>
-                                        <option>Tidak</option>
-                                    </select><br>
-                                    <button class="btn btn-sm btn-success" type="submit" onclick="return confirm('Yakin ingin konfirmasi?')">Simpan</button>
-                                </div>
+                                {{ Form::select('size', array('Y' => 'Ya', 'T' => 'Tidak')) }}
+                                {{ Form::submit('Submit') }}
                             @else
                                 -
                             @endif
 
-                            {{--<form action="{{ route('post_rq.updateStatus', $datas->id) }}" method="post">--}}
-                                {{--{{ csrf_field() }}--}}
-                                {{--{{ method_field('UPDATE') }}--}}
-                                {{--<button class="btn btn-sm btn-danger" type="submit" onclick="return confirm('Post tidak disetujui?')">Setuju</button>--}}
-                                {{--<button class="btn btn-sm btn-success" type="submit" onclick="return confirm('Setujui Postingan?')">Setuju</button>--}}
-                            {{--</form>--}}
                         </td>
 
                     </tr>

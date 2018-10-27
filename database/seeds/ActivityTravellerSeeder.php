@@ -51,7 +51,5 @@ class ActivityTravellerSeeder extends Seeder
             ]);
         }
     }
-
-
-
 }
+

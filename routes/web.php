@@ -40,4 +40,15 @@ Route::resource('post_rq','PostRQ');
 
 Route::post('/displayPegawai/{id}', 'User@displayPegawai');
 
+Route::post('/post_rq/{id}', 'PostRQ@updateStatus');
+Route::patch('updateStatus/{PostRQ}', 'PostRQ@updateStatus');
+
 Route::get('show_barang/{id}', 'Barang@show')->name('show_barang');
+
+Route::get('firebase','FirebaseController@index');
+Route::get('/dummy', function(){
+    return view('dummy');
+});
+Route::get('/read_dummy', function(){
+    return view('readDummy');
+});

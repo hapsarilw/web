@@ -1,7 +1,7 @@
 @extends('base')
 @section('content')
     <!-- Main Section -->
-    <section class="main-section">
+    <section class="main-section" id="mainsection">
         <!-- Add Your Content Inside -->
         <div class="content">
             <!-- Remove This Before You Start -->
@@ -54,4 +54,14 @@
         <!-- /.content -->
     </section>
     <!-- /.main-section -->
+    <script>
+        var config = {
+            apiKey: "{{ config('services.firebase.api_key') }}",
+            authDomain: "{{ config('services.firebase.auth_domain') }}",
+            databaseURL: "{{ config('services.firebase.database_url') }}",
+            storageBucket: "{{ config('services.firebase.storage_bucket') }}",
+        }
+        firebase.initializeApp(config);
+
+    </script>
 @endsection

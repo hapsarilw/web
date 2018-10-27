@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\ModelPostRQ;
-use App\ModelBarang;
 use Illuminate\Http\Request;
 
 class PostRQ extends Controller
@@ -41,15 +40,14 @@ class PostRQ extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Memperlihatkan data satu barang.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function showBarang($id)
+    public function show($id)
     {
-        $data = ModelBarang::find($id);
-        return view('show_barang', compact('barang'));
+        //
     }
 
     /**
@@ -70,9 +68,17 @@ class PostRQ extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function updateStatus(Request $request, $id)
     {
-        //
+        $data = ModelPostRQ::findOrFail($id);
+        if($request->input('updateSt')=="Ya"){
+            $data->statusPost = "Berhasil Posting";
+        }
+        else if($request->input('updateSt')=="Tidak"){
+            $data->statusPost = "Gagal Post";
+        }
+
+        return redirect('/home_user');
     }
 
     /**
@@ -85,8 +91,5 @@ class PostRQ extends Controller
     {
         //
     }
-    public function updateStatus($id)
-    {
-        //
-    }
+
 }

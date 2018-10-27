@@ -58,4 +58,56 @@
         <!-- /.content -->
     </section>
     <!-- /.main-section -->
+    < <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.25/vue.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "{{ config('services.firebase.api_key') }}",
+            authDomain: "{{ config('services.firebase.auth_domain') }}",
+            databaseURL: "{{ config('services.firebase.database_url') }}",
+            storageBucket: "{{ config('services.firebase.storage_bucket') }}",
+        };
+        firebase.initializeApp(config);
+
+        new Vue({
+            el: 'body',
+
+            data: {
+                task: '',
+                todos: []
+            },
+
+            ready: function() {
+                var self = this;
+
+                // Initialize firebase realtime database.
+                firebase.database().ref('todos/').on('value', function(snapshot) {
+                    // Everytime the Firebase data changes, update the todos array.
+                    self.$set('todos', snapshot.val());
+                });
+            },
+
+            methods: {
+
+                /**
+                 * Create a new todo and synchronize it with Firebase
+                 */
+                createTodo: function() {
+                    var self = this;
+
+                    // For the sake of simplicity, I'm using jQuery here
+                    $.post('/todo', {
+                        _token: '{!! csrf_token() !!}',
+                        task: self.task,
+                        is_done: false
+                    });
+
+                    this.task = '';
+                }
+            }
+        });
+    </script>
 @endsection

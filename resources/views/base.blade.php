@@ -31,6 +31,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.25/vue.min.js"></script>
     <![endif]-->
 
 </head>
@@ -42,7 +48,7 @@
         <ul class="main-nav">
             <!-- Your Logo Or Site Name -->
             <li class="nav-brand">
-                <a href="/">ADMIN - Home</a>
+                <a href="/home_user">ADMIN - Home</a>
             </li>
             <li><a href="#">User &nbsp<i class="fa fa-caret-right" aria-hidden="true"></i> </a>
                 <ul class="dropdown">

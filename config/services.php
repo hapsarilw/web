@@ -34,5 +34,12 @@ return [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
+    'firebase' => [
+        'api_key' => 'AIzaSyCTLQLC7wzcz5dEKz_BQQAY-ar6M8tQ6IQ',
+        'auth_domain' => 'fly-n-buy.firebaseapp.com',
+        'database_url' => 'https://fly-n-buy.firebaseio.com',
+        'secret' => '9zEZI8qz5KIntOecUcskF1A1NAnUwxCJrDY62XYx',
+        'storage_bucket' => 'fly-n-buy.appspot.com',
+    ],
 
 ];
