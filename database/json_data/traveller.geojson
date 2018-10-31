@@ -1,0 +1,12 @@
+{
+"type": "FeatureCollection",
+"name": "traveller",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id_pengguna": 7, "actTraveller": 2, "created_at": null, "updated_at": null }, "geometry": null },
+{ "type": "Feature", "properties": { "id_pengguna": 15, "actTraveller": 5, "created_at": null, "updated_at": null }, "geometry": null },
+{ "type": "Feature", "properties": { "id_pengguna": 11, "actTraveller": 3, "created_at": null, "updated_at": null }, "geometry": null },
+{ "type": "Feature", "properties": { "id_pengguna": 14, "actTraveller": 1, "created_at": null, "updated_at": null }, "geometry": null },
+{ "type": "Feature", "properties": { "id_pengguna": 8, "actTraveller": 4, "created_at": null, "updated_at": null }, "geometry": null }
+]
+}

@@ -1,0 +1,15 @@
+{
+"type": "FeatureCollection",
+"name": "migrations",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "migration": "2018_09_19_133524_create_model_users_table", "batch": 1 }, "geometry": null },
+{ "type": "Feature", "properties": { "migration": "2018_09_20_012836_create_post_rq_table", "batch": 1 }, "geometry": null },
+{ "type": "Feature", "properties": { "migration": "2018_09_23_132731_create_barangs_table", "batch": 1 }, "geometry": null },
+{ "type": "Feature", "properties": { "migration": "2018_09_26_060724_create_traveller_table", "batch": 1 }, "geometry": null },
+{ "type": "Feature", "properties": { "migration": "2018_09_26_061329_create_act_traveller_table", "batch": 1 }, "geometry": null },
+{ "type": "Feature", "properties": { "migration": "2018_09_26_084941_create_requester_table", "batch": 1 }, "geometry": null },
+{ "type": "Feature", "properties": { "migration": "2018_09_26_085019_create_act_requester_table", "batch": 1 }, "geometry": null },
+{ "type": "Feature", "properties": { "migration": "2018_09_26_154132_create_pengguna_table", "batch": 1 }, "geometry": null }
+]
+}

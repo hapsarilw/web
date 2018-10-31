@@ -12,8 +12,7 @@ class FirebaseController extends Controller
     public function index(){
         $serviceAccount = ServiceAccount::fromJsonFile(__DIR__.'/FirebaseKey.json');
         $firebase = (new Factory)
-            ->withServiceAccount($serviceAccount"")
-        ;
+            ->withServiceAccount($serviceAccount)
             ->withDatabaseUri('https://laravelfirebase-9d875.firebaseio.com/')
             ->create();
 

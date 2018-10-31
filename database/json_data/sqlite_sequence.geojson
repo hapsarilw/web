@@ -1,0 +1,16 @@
+{
+"type": "FeatureCollection",
+"name": "sqlite_sequence",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "name": "migrations", "seq": 295 }, "geometry": null },
+{ "type": "Feature", "properties": { "name": "Users", "seq": 16 }, "geometry": null },
+{ "type": "Feature", "properties": { "name": "barangs", "seq": 5 }, "geometry": null },
+{ "type": "Feature", "properties": { "name": "traveller", "seq": 5 }, "geometry": null },
+{ "type": "Feature", "properties": { "name": "act_traveller", "seq": 10 }, "geometry": null },
+{ "type": "Feature", "properties": { "name": "requester", "seq": 5 }, "geometry": null },
+{ "type": "Feature", "properties": { "name": "act_requester", "seq": 5 }, "geometry": null },
+{ "type": "Feature", "properties": { "name": "pengguna", "seq": 10 }, "geometry": null },
+{ "type": "Feature", "properties": { "name": "post_rq", "seq": 5 }, "geometry": null }
+]
+}

@@ -24,17 +24,17 @@
                 <div class="form-group row">
                     <div class="col-md-6">
                         <label for="email">Email:</label>
-                        <input type="email" class="form-control" id="email" name="email">
+                        <input type="email" class="form-control" id="signinEmail" name="email">
                     </div>
                 </div>
                 <div class="form-group row">
                     <div class="col-lg-6">
                         <label for="alamat">Password:</label>
-                        <input type="password" class="form-control" id="password" name="password"></input>
+                        <input type="password" class="form-control" id="signinPassword" name="password"></input>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <button type="submit" class="btn btn-md btn-primary">Login</button>
+                    <button type="submit" class="btn btn-md btn-primary" id="signin">Login</button>
                     {{--<a href="{{url('register')}}" class="btn btn-md btn-warning">Register</a>--}}
                 </div>
             </form>

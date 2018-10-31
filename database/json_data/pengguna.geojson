@@ -1,0 +1,17 @@
+{
+"type": "FeatureCollection",
+"name": "pengguna",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id_user": 15, "noRek": "97384870755", "namaBank": "Mandiri", "alamat": "5838 Danyka Fall\nPort Eloisa, OH 70907-6341", "kodePos": "69317-5099", "kecamatan": "chester", "kota": "Davonteburgh", "propinsi": "Wisconsin", "created_at": "1992\/06\/15 00:00:00", "updated_at": null }, "geometry": null },
+{ "type": "Feature", "properties": { "id_user": 11, "noRek": "7474571", "namaBank": "BNI", "alamat": "94219 Hilpert Mall Suite 781\nEast Greyson, IA 78497", "kodePos": "44729-7306", "kecamatan": "town", "kota": "Caterinaburgh", "propinsi": "Missouri", "created_at": "1989\/12\/27 00:00:00", "updated_at": null }, "geometry": null },
+{ "type": "Feature", "properties": { "id_user": 13, "noRek": "0773350590473", "namaBank": "Mandiri", "alamat": "29795 Greta Summit Suite 826\nDonatoton, TX 99246-3557", "kodePos": "10076", "kecamatan": "town", "kota": "North Omerside", "propinsi": "Alaska", "created_at": "2002\/05\/25 00:00:00", "updated_at": null }, "geometry": null },
+{ "type": "Feature", "properties": { "id_user": 14, "noRek": "80355236", "namaBank": "BCA", "alamat": "309 Georgette Wall Apt. 157\nLake Kalebstad, NV 62350-4729", "kodePos": "67521", "kecamatan": "bury", "kota": "Sawaynland", "propinsi": "Nevada", "created_at": "1990\/11\/09 00:00:00", "updated_at": null }, "geometry": null },
+{ "type": "Feature", "properties": { "id_user": 7, "noRek": "390729636445650", "namaBank": "Mandiri", "alamat": "7030 Collins Trail Suite 793\nBeertown, SC 30460-9558", "kodePos": "88882-3139", "kecamatan": "mouth", "kota": "West Horacioview", "propinsi": "Missouri", "created_at": "1993\/11\/12 00:00:00", "updated_at": null }, "geometry": null },
+{ "type": "Feature", "properties": { "id_user": 6, "noRek": "04547263", "namaBank": "BCA", "alamat": "69309 Kasey Mews Apt. 077\nGermaineview, RI 31761-3594", "kodePos": "81671", "kecamatan": "furt", "kota": "Lake Sydneyland", "propinsi": "Colorado", "created_at": "1999\/12\/01 00:00:00", "updated_at": null }, "geometry": null },
+{ "type": "Feature", "properties": { "id_user": 12, "noRek": "1143359607", "namaBank": "BCA", "alamat": "88492 Efren Spurs Suite 023\nPort Destinee, AZ 05545", "kodePos": "37712", "kecamatan": "chester", "kota": "Lake Kristystad", "propinsi": "California", "created_at": "1990\/09\/14 00:00:00", "updated_at": null }, "geometry": null },
+{ "type": "Feature", "properties": { "id_user": 8, "noRek": "5428689928", "namaBank": "Mandiri", "alamat": "82097 Rohan Flats\nPort Clintborough, VT 55364-8688", "kodePos": "59258", "kecamatan": "burgh", "kota": "Lake Shanelle", "propinsi": "Alaska", "created_at": "1991\/07\/07 00:00:00", "updated_at": null }, "geometry": null },
+{ "type": "Feature", "properties": { "id_user": 9, "noRek": "01470824875", "namaBank": "BNI", "alamat": "1294 Jakayla Via Apt. 645\nNorth Cordieville, LA 28237-6508", "kodePos": "19159", "kecamatan": "port", "kota": "West Cordelia", "propinsi": "Wisconsin", "created_at": "2016\/09\/25 00:00:00", "updated_at": null }, "geometry": null },
+{ "type": "Feature", "properties": { "id_user": 10, "noRek": "3101632", "namaBank": "BNI", "alamat": "43103 Waino Shoals Suite 785\nElectashire, TN 06756", "kodePos": "52476", "kecamatan": "mouth", "kota": "Port Rettabury", "propinsi": "Iowa", "created_at": "1986\/05\/20 00:00:00", "updated_at": null }, "geometry": null }
+]
+}

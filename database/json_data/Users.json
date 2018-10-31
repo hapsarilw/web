@@ -1,0 +1,37 @@
+{
+"users": [
+{ "name": "admin", "email": "admin@gmail.com", "password": "123", "is_admin": 1, "remember_token": null, "created_at": "2018\/10\/27 04:34:17", "updated_at": "2018\/10\/27 04:34:17" },
+{ "name": "Zola Will", "email": "vergie.dietrich@gmail.com", "password": "enim", "is_admin": 1, "remember_token": null, "created_at": "2000\/01\/06 00:00:00", "updated_at": null },
+{ "name": "Rolando Heidenreich II", "email": "kade36@yahoo.com", "password": "maiores", "is_admin": 4, "remember_token": null, "created_at": "2016\/09\/06 00:00:00", "updated_at": null },
+{ "name": "Chloe Luettgen", "email": "javier.eichmann@dickens.com", "password": "perspiciatis", "is_admin": 2, "remember_token": null, "created_at": "1984\/11\/25 00:00:00", "updated_at": null },
+{ "name": "Raphaelle Haag", "email": "kobe.mraz@hotmail.com", "password": "enim", "is_admin": 2, "remember_token": null, "created_at": "1986\/05\/02 00:00:00", "updated_at": null },
+{ "name": "Brandi McKenzie I", "email": "tgrant@hotmail.com", "password": "hic", "is_admin": 3, "remember_token": null, "created_at": "1995\/11\/19 00:00:00", "updated_at": null },
+{ "name": "Devyn McLaughlin", "email": "baltenwerth@kunde.com", "password": "quia", "is_admin": 0, "remember_token": null, "created_at": "1988\/06\/12 00:00:00", "updated_at": null },
+{ "name": "Theodore Hane", "email": "rnitzsche@bergstrom.com", "password": "odit", "is_admin": 0, "remember_token": null, "created_at": "1997\/05\/04 00:00:00", "updated_at": null },
+{ "name": "Moises Dibbert", "email": "frankie.fay@yahoo.com", "password": "incidunt", "is_admin": 0, "remember_token": null, "created_at": "2004\/10\/03 00:00:00", "updated_at": null },
+{ "name": "Demarco Stokes", "email": "estrella79@gmail.com", "password": "aut", "is_admin": 0, "remember_token": null, "created_at": "1984\/12\/05 00:00:00", "updated_at": null },
+{ "name": "Ceasar West", "email": "karolann48@yahoo.com", "password": "officiis", "is_admin": 0, "remember_token": null, "created_at": "2018\/06\/11 00:00:00", "updated_at": null },
+{ "name": "Kylie Waters", "email": "emiliano.terry@gmail.com", "password": "ut", "is_admin": 0, "remember_token": null, "created_at": "2005\/06\/01 00:00:00", "updated_at": null },
+{ "name": "Lance Nikolaus", "email": "rbashirian@morar.com", "password": "rerum", "is_admin": 0, "remember_token": null, "created_at": "1989\/02\/26 00:00:00", "updated_at": null },
+{ "name": "Mr. Demarco Doyle", "email": "clint41@daniel.biz", "password": "voluptates", "is_admin": 0, "remember_token": null, "created_at": "2008\/09\/05 00:00:00", "updated_at": null },
+{ "name": "Agustin Armstrong", "email": "felicity.kreiger@lueilwitz.com", "password": "aut", "is_admin": 0, "remember_token": null, "created_at": "1986\/06\/04 00:00:00", "updated_at": null },
+{ "name": "Sean Gerlach", "email": "willms.olen@cole.com", "password": "corrupti", "is_admin": 0, "remember_token": null, "created_at": "2003\/03\/12 00:00:00", "updated_at": null }
+]
+}
+
+{ name: "admin", email: "admin@gmail.com", password: 123, is_admin: 1, remember_token: null, created_at: "2018\/10\/27 04:34:17", updated_at: "2018\/10\/27 04:34:17" },
+{ name: "Zola Will", email: "vergie.dietrich@gmail.com", password: "enim", is_admin: 1, remember_token: null, created_at: "2000\/01\/06 00:00:00", updated_at: null },
+{ name: "Rolando Heidenreich II", email: "kade36@yahoo.com", password: "maiores", is_admin: 4, remember_token: null, created_at: "2016\/09\/06 00:00:00", updated_at: null },
+{ name: "Chloe Luettgen", email: "javier.eichmann@dickens.com", password: "perspiciatis", is_admin: 2, remember_token: null, created_at: "1984\/11\/25 00:00:00",updated_at: null },
+{ name: "Raphaelle Haag", email: "kobe.mraz@hotmail.com", password: "enim", is_admin: 2, remember_token: null, created_at: "1986\/05\/02 00:00:00", updated_at: null },
+{ name: "Brandi McKenzie I", email: "tgrant@hotmail.com", password: "hic", is_admin: 3, remember_token: null, created_at: "1995\/11\/19 00:00:00", updated_at: null },
+{ name: "Devyn McLaughlin", email: "baltenwerth@kunde.com", password: "quia", is_admin: 0, remember_token: null, created_at: "1988\/06\/12 00:00:00", updated_at: null },
+{ name: "Theodore Hane", email: "rnitzsche@bergstrom.com", password: "odit", is_admin: 0, remember_token: null, created_at: "1997\/05\/04 00:00:00", updated_at: null },
+{ name: "Moises Dibbert", email: "frankie.fay@yahoo.com", password: "incidunt", is_admin: 0, remember_token: null, created_at: "2004\/10\/03 00:00:00", updated_at: null },
+{ name: "Demarco Stokes", email: "estrella79@gmail.com", password: "aut", is_admin: 0, remember_token: null, created_at: "1984\/12\/05 00:00:00", updated_at: null },
+{ name: "Ceasar West", email: "karolann48@yahoo.com", password: "officiis", is_admin: 0, remember_token: null, created_at: "2018\/06\/11 00:00:00", updated_at: null },
+{ name: "Kylie Waters", email: "emiliano.terry@gmail.com", password: "ut", is_admin: 0, remember_token: null, created_at: "2005\/06\/01 00:00:00", updated_at: null },
+{ name: "Lance Nikolaus", email: "rbashirian@morar.com", password: "rerum", is_admin: 0, remember_token: null, created_at: "1989\/02\/26 00:00:00", updated_at: null },
+{ name: "Mr. Demarco Doyle", email: "clint41@daniel.biz", password: "voluptates", is_admin: 0, remember_token: null, created_at: "2008\/09\/05 00:00:00", updated_at: null },
+{ name: "Agustin Armstrong", email: "felicity.kreiger@lueilwitz.com", password: "aut", is_admin: 0, remember_token: null, created_at: "1986\/06\/04 00:00:00", updated_at: null },
+{ name: "Sean Gerlach", email: "willms.olen@cole.com", password: "corrupti", is_admin: 0, remember_token: null, created_at: "2003\/03\/12 00:00:00", updated_at: null }
