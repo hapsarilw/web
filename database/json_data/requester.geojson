@@ -1,12 +1,8 @@
-{
-"type": "FeatureCollection",
-"name": "requester",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"features": [
-{ "type": "Feature", "properties": { "id_pengguna": 8, "actRequester": 1, "created_at": "2018\/10\/31 09:00:13", "updated_at": null }, "geometry": null },
-{ "type": "Feature", "properties": { "id_pengguna": 11, "actRequester": 2, "created_at": "2018\/10\/31 09:00:13", "updated_at": null }, "geometry": null },
-{ "type": "Feature", "properties": { "id_pengguna": 12, "actRequester": 4, "created_at": "2018\/10\/31 09:00:13", "updated_at": null }, "geometry": null },
-{ "type": "Feature", "properties": { "id_pengguna": 15, "actRequester": 5, "created_at": "2018\/10\/31 09:00:13", "updated_at": null }, "geometry": null },
-{ "type": "Feature", "properties": { "id_pengguna": 9, "actRequester": 3, "created_at": "2018\/10\/31 09:00:13", "updated_at": null }, "geometry": null }
-]
-}
+"requester": [
+{ id_pengguna: 8, actRequester: 1 }
+{ id_pengguna: 11, actRequester: 2 }
+{ id_pengguna: 12, actRequester: 4 }
+{ id_pengguna: 15, actRequester: 5 }
+{ id_pengguna: 9, actRequester: 3 }
+
+

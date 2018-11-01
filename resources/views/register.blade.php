@@ -17,36 +17,35 @@
                     </ul>
                 </div>
             @endif
-            <form action="{{ url('/registerPost') }}" method="post">
-                {{ csrf_field() }}
+            <form >
                 <div class="form-group">
                     <label for="name">Name:</label>
-                    <input type="text"  class="form-control" id="name" name="name">
+                    <input type="text"  class="form-control" data-key="newName" >
                 </div>
                 <div class="form-group">
                     <label for="email">Email:</label>
-                    <input type="email" class="form-control" id="email" name="email">
+                    <input type="email" class="form-control" data-key="newEmail" >
                 </div>
                 <div class="form-group">
                     <label for="password">Password:</label>
-                    <input type="password" class="form-control" id="password" name="password">
+                    <input type="password" class="form-control" data-key="newPassword" >
                 </div>
                 <div class="form-group">
                     <label for="password">Password Confirmation:</label>
-                    <input type="password" class="form-control" id="confirmation" name="confirmation">
+                    <input type="password" class="form-control" data-key="newConfirmation" >
                 </div>
                 <div class="form-group">
                     <label for="Jenis Pegawai">Pilih Pegawai:</label>
-                    <div class="form-group">
-                        <input type="radio" name="is_admin" value="1">Admin<br>
-                        <input type="radio" name="is_admin" value="2">Transaksi<br>
-                        <input type="radio" name="is_admin" value="3">Keuangan<br>
-                        <input type="radio" name="is_admin" value="4">Customer Service<br>
-                    </div>
+                        <select class="form-control" data-key="is_admin">
+                            <option value="1">Admin</option>
+                            <option value="2">Transaksi</option>
+                            <option value="3">Keuangan</option>
+                            <option value="4">Customer Service</option>
+                        </select>
                 </div>
 
                 <div class="form-group">
-                    <button type="submit" class="btn btn-md btn-primary">Simpan</button>
+                    <button type="submit" class="btn btn-md btn-primary" id="add-user-btn">Simpan</button>
                     <button type="reset" class="btn btn-md btn-danger">Batal</button>
                 </div>
             </form>
@@ -54,14 +53,5 @@
         <!-- /.content -->
     </section>
     <!-- /.main-section -->
-    <script>
-        var config = {
-            apiKey: "{{ config('services.firebase.api_key') }}",
-            authDomain: "{{ config('services.firebase.auth_domain') }}",
-            databaseURL: "{{ config('services.firebase.database_url') }}",
-            storageBucket: "{{ config('services.firebase.storage_bucket') }}",
-        }
-        firebase.initializeApp(config);
 
-    </script>
 @endsection

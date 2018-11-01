@@ -95,29 +95,29 @@
                 {{--<a href="#">Konfirmasi Customer Service</a>--}}
             {{--</li>--}}
             <li style="bottom: 0; position: fixed; overlay: none;">
-                <a  href="/logout">Logout</a>
+                <a  href="/logout" id="signout">Logout</a>
             </li>
         </ul>
     </aside>
+    <!-- /#wrapper -->
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="/assets/js/custom.js"></script> {{-- ini cara memanggil js dari folder assets -> js --}}
+
+<!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+    <script src="../js/main.js"></script>
     @yield('content') {{-- Semua file konten kita akan ada di bagian ini --}}
 
 
 </div>
-<!-- /#wrapper -->
 
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-
-<!-- Bootstrap JavaScript -->
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-
-<!-- Custom JavaScript -->
-<script src="/assets/js/custom.js"></script> {{-- ini cara memanggil js dari folder assets -> js --}}
-
-<!-- Firebase -->
-<script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
-<script src="../js/main.js"></script>
 </body>
 
 </html>

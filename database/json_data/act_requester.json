@@ -1,0 +1,9 @@
+{
+
+"act_requester": [
+{ id_requester: 4, aksi: "komentar pada post", postRequester: "https:\/\/gusikowski.com\/accusamus-qui-est-quod-et.html" }
+{ id_requester: 6, aksi: "komentar pada post", postRequester: "http:\/\/jast.org\/aut-qui-et-repellendus-quasi" }
+{ id_requester: 3, aksi: "upload post requester", postRequester: "http:\/\/stokes.net\/" }
+{ id_requester: 6, aksi: "melakukan pembayaran", postRequester: "http:\/\/www.ryan.com\/rerum-molestiae-amet-aut-hic" }
+{ id_requester: 5, aksi: "upload post requester", postRequester: "https:\/\/nicolas.com\/suscipit-ullam-velit-dolorem-quis-culpa-quos-eveniet.html" }
+
