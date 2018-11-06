@@ -191,20 +191,20 @@
     // var barangRef = ref.child('barang');
     //
     // barangRef.push(
-    //     { nama: "Barang Jaskolski", unit: 2, deskripsi: "Excepturi ut magni possimus atque. At asperiores et velit in quo rerum maiores. Soluta iste nihil odit expedita expedita natus magni.", statusPecahBelah: "Tidak", berat: 1, harga: 93814.0, panjang: 40, lebar: 35, foto: "68747470733A2F2F6C6F72656D706978656C2E636F6D2F3634302F3438302F3F32313039...", kodeBarang: "Ready Stock"}
+    //     { idPengguna:3, nama: "Barang Jaskolski", unit: 2, deskripsi: "Excepturi ut magni possimus atque. At asperiores et velit in quo rerum maiores. Soluta iste nihil odit expedita expedita natus magni.", statusPecahBelah: "Tidak", berat: 1, harga: 93814.0, panjang: 40, lebar: 35, foto: "68747470733A2F2F6C6F72656D706978656C2E636F6D2F3634302F3438302F3F32313039...", kodeBarang: "Ready Stock"}
     //
     // );
     // barangRef.push(
-    //     { nama: "Barang Legros", unit: 1, deskripsi: "Aspernatur quas ipsum praesentium occaecati. Quia alias hic ipsa sit ut asperiores. Expedita sint rerum aperiam placeat rerum.", statusPecahBelah: "Ya", berat: 1, harga: 71737.0, panjang: 44, lebar: 70, foto: "68747470733A2F2F6C6F72656D706978656C2E636F6D2F3634302F3438302F3F33333835...", kodeBarang: "Request", }
+    //     { idPengguna:6,  nama: "Barang Legros", unit: 1, deskripsi: "Aspernatur quas ipsum praesentium occaecati. Quia alias hic ipsa sit ut asperiores. Expedita sint rerum aperiam placeat rerum.", statusPecahBelah: "Ya", berat: 1, harga: 71737.0, panjang: 44, lebar: 70, foto: "68747470733A2F2F6C6F72656D706978656C2E636F6D2F3634302F3438302F3F33333835...", kodeBarang: "Request", }
     // );
     // barangRef.push(
-    //     { nama: "Barang abc", unit: 3, deskripsi: "Sapiente aut repellat magnam in est. Sint accusamus tempora quas aut cupiditate quidem. Occaecati incidunt assumenda at. Sunt quam nihil nisi eius rerum ea.", statusPecahBelah: "Ya", berat: 2, harga: 106198.0, panjang: 93, "lebar": 39, "foto": "68747470733A2F2F6C6F72656D706978656C2E636F6D2F3634302F3438302F3F37353636...", kodeBarang: "Request" }
+    //     { idPengguna:8, nama: "Barang abc", unit: 3, deskripsi: "Sapiente aut repellat magnam in est. Sint accusamus tempora quas aut cupiditate quidem. Occaecati incidunt assumenda at. Sunt quam nihil nisi eius rerum ea.", statusPecahBelah: "Ya", berat: 2, harga: 106198.0, panjang: 93, "lebar": 39, "foto": "68747470733A2F2F6C6F72656D706978656C2E636F6D2F3634302F3438302F3F37353636...", kodeBarang: "Request" }
     // );
     // barangRef.push(
-    //     { nama: "Barang erd", unit: 3, deskripsi: "Enim consequuntur dolor vel dolores eaque dicta est ea. Voluptatem non occaecati laudantium recusandae eos aliquam. Cupiditate est voluptatem quia quis eveniet ab alias.", statusPecahBelah: "Tidak", berat: 4, harga: 192619.0, panjang: 26, "lebar": 48, "foto": "68747470733A2F2F6C6F72656D706978656C2E636F6D2F3634302F3438302F3F35393837...", kodeBarang: "Pre Order" }
+    //     { idPengguna:11, nama: "Barang erd", unit: 3, deskripsi: "Enim consequuntur dolor vel dolores eaque dicta est ea. Voluptatem non occaecati laudantium recusandae eos aliquam. Cupiditate est voluptatem quia quis eveniet ab alias.", statusPecahBelah: "Tidak", berat: 4, harga: 192619.0, panjang: 26, "lebar": 48, "foto": "68747470733A2F2F6C6F72656D706978656C2E636F6D2F3634302F3438302F3F35393837...", kodeBarang: "Pre Order" }
     // );
     // barangRef.push(
-    //     { nama: "Barang ruqi", unit: 1, deskripsi: "Tempore veritatis aut voluptas quia qui cum. Quia et doloremque autem maiores velit modi minus fugit. Dignissimos et aut earum deserunt.", statusPecahBelah: "Ya", berat: 1, harga: 97980.0, panjang: 85, "lebar": 95, "foto": "68747470733A2F2F6C6F72656D706978656C2E636F6D2F3634302F3438302F3F39343133...", kodeBarang: "Pre Order" }
+    //     { idPengguna:12, nama: "Barang ruqi", unit: 1, deskripsi: "Tempore veritatis aut voluptas quia qui cum. Quia et doloremque autem maiores velit modi minus fugit. Dignissimos et aut earum deserunt.", statusPecahBelah: "Ya", berat: 1, harga: 97980.0, panjang: 85, "lebar": 95, "foto": "68747470733A2F2F6C6F72656D706978656C2E636F6D2F3634302F3438302F3F39343133...", kodeBarang: "Pre Order" }
     // );
 
     /*********************************************/
@@ -254,21 +254,68 @@
     /*********************************************/
     // Insert Act_Traveller //
     /*********************************************/
-    var act_reqRef = ref.child('act_requester');
+    // var act_reqRef = ref.child('act_requester');
+    //
+    // act_reqRef.push(
+    //     { id_requester: 4, aksi: "komentar pada post", postRequester: "https:\/\/gusikowski.com\/accusamus-qui-est-quod-et.html" }
+    // );
+    // act_reqRef.push(
+    //     { id_requester: 6, aksi: "komentar pada post", postRequester: "http:\/\/jast.org\/aut-qui-et-repellendus-quasi" }
+    // );
+    // act_reqRef.push(
+    //     { id_requester: 3, aksi: "upload post requester", postRequester: "http:\/\/stokes.net\/" }
+    // );
+    // act_reqRef.push(
+    //     { id_requester: 6, aksi: "melakukan pembayaran", postRequester: "http:\/\/www.ryan.com\/rerum-molestiae-amet-aut-hic" }
+    // );
+    // act_reqRef.push(
+    //     { id_requester: 5, aksi: "upload post requester", postRequester: "https:\/\/nicolas.com\/suscipit-ullam-velit-dolorem-quis-culpa-quos-eveniet.html"}
+    // );
 
-    act_reqRef.push(
-        { id_requester: 4, aksi: "komentar pada post", postRequester: "https:\/\/gusikowski.com\/accusamus-qui-est-quod-et.html" }
-    );
-    act_reqRef.push(
-        { id_requester: 6, aksi: "komentar pada post", postRequester: "http:\/\/jast.org\/aut-qui-et-repellendus-quasi" }
-    );
-    act_reqRef.push(
-        { id_requester: 3, aksi: "upload post requester", postRequester: "http:\/\/stokes.net\/" }
-    );
-    act_reqRef.push(
-        { id_requester: 6, aksi: "melakukan pembayaran", postRequester: "http:\/\/www.ryan.com\/rerum-molestiae-amet-aut-hic" }
-    );
-    act_reqRef.push(
-        { id_requester: 5, aksi: "upload post requester", postRequester: "https:\/\/nicolas.com\/suscipit-ullam-velit-dolorem-quis-culpa-quos-eveniet.html"}
-    );
+    /*********************************************/
+    // Insert Beli //
+    /*********************************************/
+    // var act_reqRef = ref.child('beli');
+    //
+    // var beli = ref.child('beli');
+    // beli.push(
+    //     { idReview : null, idTraveller: 1, idBarang : 1, statusBeli : "disetujui traveller" }
+    // );
+    // beli.push(
+    //     { idReview : null, idTraveller: 1, idBarang : 5, statusBeli : "menunggu pembayaran" }
+    // );
+    // beli.push(
+    //     { idReview : 1, idTraveller: 5, idBarang : 2, statusBeli : "proses pembelian" }
+    // );
+    // beli.push(
+    //     { idReview : 2, idTraveller: 3, idBarang : 4, statusBeli : "proses pembelian" }
+    // );
+
+
+    /*********************************************/
+    // Insert Pengiriman //
+    /*********************************************/
+    // var pengiriman = ref.child('pengiriman');
+    //
+    // pengiriman.push(
+    //     { idBarang : null, idTraveller: 3, noResi: "JNE1054", tglPengiriman: "12-03-2018", biayaKirim: 12000, statusKirim: "proses kirim ke alamat penerima"}
+    // );
+    // pengiriman.push(
+    //     { idBarang : null, idTraveller: 5, noResi: "JNE1054", tglPengiriman: "12-03-2018", biayaKirim: 12000, statusKirim: "proses kirim ke alamat penerima"}
+    // );
+
+
+    /*********************************************/
+    // Insert Review //
+    /*********************************************/
+    // var review = ref.child('review')
+    //
+    // review.push(
+    //     { idBeli:1, isiReview : null, bintang:5 }
+    // );
+    //
+    // review.push(
+    //     { idBeli:2, isiReview : "Pengiriman baik, barang baik", bintang:3 }
+    // );
+
 </script>

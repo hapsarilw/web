@@ -58,7 +58,7 @@
 
 <!-- Firebase -->
 <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
-<script src="../js/main.js"></script>
+
 </body>
 
 </html>

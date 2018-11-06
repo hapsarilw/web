@@ -1,3 +1,4 @@
+import Firebase from 'firebase';
 var appMaster = {
 	menuToggler: function(){
 		// Menu Toggler
@@ -22,4 +23,4 @@ var config = {
     storageBucket: "fly-n-buy.appspot.com",
     messagingSenderId: "1023970941466"
 };
-firebase.initializeApp(config);
+Firebase.initializeApp(config);

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateKirimTable extends Migration
+class CreatePengirimanTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateKirimTable extends Migration
      */
     public function up()
     {
-        Schema::create('kirim', function (Blueprint $table) {
+        Schema::create('pengiriman', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ class CreateKirimTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kirim');
+        Schema::dropIfExists('pengiriman');
     }
 }

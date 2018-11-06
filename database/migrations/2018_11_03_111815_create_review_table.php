@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateReceiveTable extends Migration
+class CreateReviewTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateReceiveTable extends Migration
      */
     public function up()
     {
-        Schema::create('receive', function (Blueprint $table) {
+        Schema::create('review', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ class CreateReceiveTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('receive');
+        Schema::dropIfExists('review');
     }
 }

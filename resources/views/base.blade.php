@@ -112,7 +112,7 @@
 
 <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="../../public/assets/js/main.js"></script>
     @yield('content') {{-- Semua file konten kita akan ada di bagian ini --}}
 
 

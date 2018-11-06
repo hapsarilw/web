@@ -1,7 +1,7 @@
-import Firebase from 'firebase'
-import Vue from 'vue'
-import VueFire from 'vuefire'
-import App from './App'
+import Firebase from 'firebase';
+import Vue from 'vue';
+import VueFire from 'vuefire';
+import App from '../../../resources/js/app';
 
 Vue.use(VueFire)
 new Vue({
@@ -11,11 +11,12 @@ new Vue({
 })
 
 let config = {
-    apiKey: "{{ config('services.firebase.api_key') }}",
-    authDomain: "{{ config('services.firebase.auth_domain') }}",
-    databaseURL: "{{ config('services.firebase.database_url') }}",
-    storageBucket: "{{ config('services.firebase.storage_bucket') }}",
-
+    apiKey: "AIzaSyCTLQLC7wzcz5dEKz_BQQAY-ar6M8tQ6IQ",
+    authDomain: "fly-n-buy.firebaseapp.com",
+    databaseURL: "https://fly-n-buy.firebaseio.com",
+    projectId: "fly-n-buy",
+    storageBucket: "fly-n-buy.appspot.com",
+    messagingSenderId: "1023970941466"
 };
 
 Firebase.initializeApp(config);
@@ -107,6 +108,76 @@ function clickSigninButton() {
         console.log(error.message);
         // error message show that you need to enable that authentication in firebase
     });
+
+}
+
+// --------------------------
+// READ
+// --------------------------
+function readUserData() {
+
+    const userListUI = document.getElementById("user-list");
+
+    usersRef.on("value", snap => {
+
+        userListUI.innerHTML = ""
+
+        snap.forEach(childSnap => {
+
+            let key = childSnap.key,
+                value = childSnap.val()
+
+            let $li = document.createElement("li");
+
+            // edit icon
+            let editIconUI = document.createElement("span");
+            editIconUI.class = "edit-user";
+            editIconUI.innerHTML = " ✎";
+            editIconUI.setAttribute("userid", key);
+            editIconUI.addEventListener("click", editButtonClicked)
+
+            // delete icon
+            let deleteIconUI = document.createElement("span");
+            deleteIconUI.class = "delete-user";
+            deleteIconUI.innerHTML = " ☓";
+            deleteIconUI.setAttribute("userid", key);
+            deleteIconUI.addEventListener("click", deleteButtonClicked)
+
+            $li.innerHTML = value.name;
+            $li.append(editIconUI);
+            $li.append(deleteIconUI);
+
+            $li.setAttribute("user-key", key);
+            $li.addEventListener("click", userClicked)
+            userListUI.append($li);
+
+        });
+    })
+
+}
+
+
+
+function userClicked(e) {
+
+
+    var userID = e.target.getAttribute("user-key");
+
+    const userRef = dbRef.child('users/' + userID);
+    const userDetailUI = document.getElementById("user-detail");
+
+    userRef.on("value", snap => {
+
+        userDetailUI.innerHTML = ""
+
+        snap.forEach(childSnap => {
+            var $p = document.createElement("p");
+            $p.innerHTML = childSnap.key  + " - " +  childSnap.val();
+            userDetailUI.append($p);
+        })
+
+    });
+
 
 }
 
