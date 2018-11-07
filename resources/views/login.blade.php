@@ -30,7 +30,7 @@
                 <div class="form-group row">
                     <div class="col-lg-6">
                         <label for="alamat">Password:</label>
-                        <input type="password" class="form-control" id="signinPassword" name="password"></input>
+                        <input type="password" class="form-control" id="signinPassword" name="password">
                     </div>
                 </div>
                 <div class="form-group row">
