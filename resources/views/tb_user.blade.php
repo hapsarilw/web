@@ -29,29 +29,49 @@
             </table>
         </div>
         <!-- /.content -->
-    </section>
-    <!-- Update Model -->
-    <form action="" method="POST" class="users-update-record-model form-horizontal">
-        <div id="update-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
-            <div class="modal-dialog" style="width:55%;">
-                <div class="modal-content" style="overflow: hidden;">
-                    <div class="modal-header">
-                        <h4 class="modal-title" id="custom-width-modalLabel">Update Record</h4>
-                        <button type="button" class="close update-data-from-delete-form" data-dismiss="modal" aria-hidden="true">×</button>
-                    </div>
-                    <div class="modal-body" id="updateBody">
+        <!-- Update Model -->
+        <form action="" method="POST" class="users-update-record-model form-horizontal">
+            <div id="update-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog" style="width:55%;">
+                    <div class="modal-content" style="overflow: hidden;">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="custom-width-modalLabel">Update Data Pegawai</h4>
+                            <button type="button" class="close update-data-from-delete-form" data-dismiss="modal" aria-hidden="true">×</button>
+                        </div>
+                        <div class="modal-body" id="updateBody">
 
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default waves-effect update-data-from-delete-form" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-success waves-effect waves-light updateUserRecord">Update</button>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default waves-effect update-data-from-delete-form" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success waves-effect waves-light updateUserRecord">Update</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </form>
+        </form>
+        <!-- Delete Model -->
+        <form action="" method="POST" class="users-remove-record-model">
+            <div id="remove-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog" style="width:55%;">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="custom-width-modalLabel">Hapus Data Pegawai</h4>
+                            <button type="button" class="close remove-data-from-delete-form" data-dismiss="modal" aria-hidden="true">×</button>
+                        </div>
+                        <div class="modal-body">
+                            <h4>Anda ingin menghapus record ini?</h4>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default waves-effect remove-data-from-delete-form" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-danger waves-effect waves-light deleteMatchRecord">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
     <!-- /.main-section -->
-    < <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.25/vue.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
     <script type="text/javascript" src="../../public/assets/js/main.js"></script>
@@ -59,7 +79,7 @@
         var config = {
             apiKey: "AIzaSyCTLQLC7wzcz5dEKz_BQQAY-ar6M8tQ6IQ",
             authDomain: "fly-n-buy.firebaseapp.com",
-            databaseURL: "https://fly-n-bugy.firebaseio.com",
+            databaseURL: "https://fly-n-buy.firebaseio.com",
             projectId: "fly-n-buy",
             storageBucket: "fly-n-buy.appspot.com",
             messagingSenderId: "1023970941466",
@@ -106,8 +126,80 @@
             }
 
 
+        });
+        // Update Data
+        var updateID = 0;
+        $('body').on('click', '.updateData', function() {
+            updateID = $(this).attr('data-id');
+            firebase.database().ref('users/' + updateID).on('value', function(snapshot) {
+                var values = snapshot.val();
+                var updateData =
+                    '<div class="form-group">\
+                        <label for="first_name" class="col-md-12 col-form-label">Nama</label>\
+                        <div class="col-md-12">\
+                            <input id="first_name" type="text" class="form-control" name="first_name" value="'+values.name+'" required autofocus>\
+                        </div>\
+                    </div>\
+                    <div class="form-group">\
+                        <label for="last_name" class="col-md-12 col-form-label">Email</label>\
+                        <div class="col-md-12">\
+                            <input id="last_name" type="text" class="form-control" name="last_name" value="'+values.email+'" required autofocus>\
+                        </div>\
+		            </div>\
+		            <div class="form-group">\
+                        <label for="jenis_pegawai" class="col-md-12 col-form-label">Jenis Pegawai</label>\
+                        <div class="col-md-12">\
+                            <select class=" form-control" id="jenisPegawai">\
+                                <option value=1>Admin</option>\
+                                <option value=2>Transaksi</option>\
+                                <option value=3>Keuangan</option>\
+                                <option value=4>Customer Service</option>\
+                            </select>\
+                        </div>\
+                    </div>\
+		            ';
+
+                $('#updateBody').html(updateData);
+            });
 
         });
+
+        $('.updateUserRecord').on('click', function() {
+            var values = $(".users-update-record-model").serializeArray();
+
+            var e = document.getElementById("jenisPegawai");
+            var jenis = e.options[e.selectedIndex].value;
+
+            var postData = {
+                email : values[1].value,
+                name : values[0].value,
+                is_admin : jenis,
+            };
+
+            var updates = {};
+            updates['/users/' + updateID] = postData;
+
+            firebase.database().ref().update(updates);
+
+            $("#update-modal").modal('hide');
+        });
+        // Remove Data
+        $("body").on('click', '.removeData', function() {
+            var id = $(this).attr('data-id');
+            $('body').find('.users-remove-record-model').append('<input name="id" type="hidden" value="'+ id +'">');
+        });
+
+        $('.deleteMatchRecord').on('click', function(){
+            var values = $(".users-remove-record-model").serializeArray();
+            var id = values[0].value;
+            firebase.database().ref('users/' + id).remove();
+            $('body').find('.users-remove-record-model').find( "input" ).remove();
+            $("#remove-modal").modal('hide');
+        });
+        $('.remove-data-from-delete-form').click(function() {
+            $('body').find('.users-remove-record-model').find( "input" ).remove();
+        });
+
     </script>
 
 
