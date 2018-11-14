@@ -108,11 +108,10 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 
     <!-- Custom JavaScript -->
-    <script src="/assets/js/custom.js"></script> {{-- ini cara memanggil js dari folder assets -> js --}}
+    {{--<script src="/assets/js/custom.js"></script> --}}{{-- ini cara memanggil js dari folder assets -> js --}}
 
 <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
-    <script src="../../public/assets/js/main.js"></script>
     @yield('content') {{-- Semua file konten kita akan ada di bagian ini --}}
 
 

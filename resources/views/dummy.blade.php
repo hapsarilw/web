@@ -59,8 +59,8 @@
     //     { name: "Raphaelle Haag", email: "kobe.mraz@hotmail.com", password: "enim", is_admin: 2 }
     //
     // );
-    // userRef.push (
-    //     { name: "Brandi McKenzie I", email: "tgrant@hotmail.com", password: "hic", is_admin: 3 }
+    // ref.child('users/-LQ9hR8PcrcOwdSVz_7q').update(
+    //     { name: "Brandi McKenzie I", email: "tgrant@hotmail.com", password: "hic", is_admin: 0 }
     //
     // );
     // userRef.push (
@@ -105,84 +105,165 @@
     /*********************************************/
     // var penggunaRef = ref.child('pengguna');
     // penggunaRef.push(
-    //     { id_user: 15, noRek: "97384870755", namaBank: "Mandiri", alamat: "5838 Danyka Fall\nPort Eloisa OH 70907-6341", kodePos: "69317-5099", kecamatan: "chester", kota: "Davonteburgh", propinsi: "Wisconsin"}
+    //     { id_user:"-LQ9hR8PcrcOwdSVz_7q", noRek: "97384870755", namaBank: "Mandiri", alamat: "5838 Danyka Fall\nPort Eloisa OH 70907-6341", kodePos: "69317-5099", kecamatan: "chester", kota: "Davonteburgh", propinsi: "Wisconsin"}
     // );
     // penggunaRef.push(
-    //     { id_user: 11, noRek: "7474571", namaBank: "BNI", alamat: "94219 Hilpert Mall Suite 781\nEast Greyson, IA 78497", kodePos: "44729-7306", kecamatan: "town", kota: "Caterinaburgh", propinsi: "Missouri"}
+    //     { id_user:"-LQ9hR8PcrcOwdSVz_7r", noRek: "7474571", namaBank: "BNI", alamat: "94219 Hilpert Mall Suite 781\nEast Greyson, IA 78497", kodePos: "44729-7306", kecamatan: "town", kota: "Caterinaburgh", propinsi: "Missouri"}
     // );
     // penggunaRef.push(
-    //     { id_user: 13, noRek: "0773350590473", namaBank: "Mandiri", alamat: "29795 Greta Summit Suite 826\nDonatoton, TX 99246-3557", kodePos: "10076", kecamatan: "town", kota: "North Omerside", propinsi: "Alaska"}
+    //     { id_user:"-LQ9hR8QpVrEHOE6EYp_", noRek: "0773350590473", namaBank: "Mandiri", alamat: "29795 Greta Summit Suite 826\nDonatoton, TX 99246-3557", kodePos: "10076", kecamatan: "town", kota: "North Omerside", propinsi: "Alaska"}
     //
     // );
     // penggunaRef.push(
-    //     { id_user: 14, noRek: "80355236", namaBank: "BCA", alamat: "309 Georgette Wall Apt. 157\nLake Kalebstad, NV 62350-4729", kodePos: "67521", kecamatan: "bury", kota: "Sawaynland", propinsi: "Nevada" }
+    //     { id_user:"-LQ9hR8SDqaMr-dicq53", noRek: "80355236", namaBank: "BCA", alamat: "309 Georgette Wall Apt. 157\nLake Kalebstad, NV 62350-4729", kodePos: "67521", kecamatan: "bury", kota: "Sawaynland", propinsi: "Nevada" }
     //
     // );
     // penggunaRef.push(
-    //     { id_user: 7, noRek: "390729636445650", namaBank: "Mandiri", "alamat": "7030 Collins Trail Suite 793\nBeertown, SC 30460-9558", kodePos: "88882-3139", kecamatan: "mouth", kota: "West Horacioview" }
+    //     { id_user:"-LQ9hR8SDqaMr-dicq54", noRek: "390729636445650", namaBank: "Mandiri", "alamat": "7030 Collins Trail Suite 793\nBeertown, SC 30460-9558", kodePos: "88882-3139", kecamatan: "mouth", kota: "West Horacioview" }
     //
     // );
     // penggunaRef.push(
-    //     { id_user: 6, noRek: "04547263", namaBank: "BCA", alamat: "69309 Kasey Mews Apt. 077\nGermaineview, RI 31761-3594", kodePos: "81671", kecamatan: "furt", kota: "Lake Sydneyland", propinsi: "Colorado" }
+    //     { id_user:"-LQ9hR8T34h2WEZ8xJRx", noRek: "04547263", namaBank: "BCA", alamat: "69309 Kasey Mews Apt. 077\nGermaineview, RI 31761-3594", kodePos: "81671", kecamatan: "furt", kota: "Lake Sydneyland", propinsi: "Colorado" }
     //
     // );
     // penggunaRef.push(
-    //     { id_user: 12, noRek: "1143359607", namaBank: "BCA", alamat: "88492 Efren Spurs Suite 023\nPort Destinee, AZ 05545", kodePos: "37712", kecamatan: "chester", kota: "Lake Kristystad", propinsi: "California" }
+    //     { id_user:"-LQ9hR8V6FnySxRthnu4", noRek: "1143359607", namaBank: "BCA", alamat: "88492 Efren Spurs Suite 023\nPort Destinee, AZ 05545", kodePos: "37712", kecamatan: "chester", kota: "Lake Kristystad", propinsi: "California" }
     //
     // );
     // penggunaRef.push(
-    //     { id_user: 8, noRek: "5428689928", namaBank: "Mandiri", alamat: "82097 Rohan Flats\nPort Clintborough, VT 55364-8688", kodePos: "59258", kecamatan: "burgh", kota: "Lake Shanelle", propinsi: "Alaska" }
+    //     { id_user:"-LQ9hR8W7cz9ioMd79a8", noRek: "5428689928", namaBank: "Mandiri", alamat: "82097 Rohan Flats\nPort Clintborough, VT 55364-8688", kodePos: "59258", kecamatan: "burgh", kota: "Lake Shanelle", propinsi: "Alaska" }
     //
     // );
     // penggunaRef.push(
-    //     { id_user: 9, noRek: "01470824875", namaBank: "BNI", alamat: "1294 Jakayla Via Apt. 645\nNorth Cordieville, LA 28237-6508", kodePos: "19159", "kecamatan": "port", kota: "West Cordelia", propinsi: "Wisconsin" }
+    //     { id_user:"-LQ9hR8XnxY3_YZ5yIa7", noRek: "01470824875", namaBank: "BNI", alamat: "1294 Jakayla Via Apt. 645\nNorth Cordieville, LA 28237-6508", kodePos: "19159", "kecamatan": "port", kota: "West Cordelia", propinsi: "Wisconsin" }
     //
     // );
     // penggunaRef.push(
-    //     { id_user: 10, noRek: "3101632", namaBank: "BNI", alamat: "43103 Waino Shoals Suite 785\nElectashire, TN 06756", kodePos: "52476", "kecamatan": "mouth", kota: "Port Rettabury", propinsi: "Iowa" }
+    //     { id_user: "-LQ9hR8XnxY3_YZ5yIa8", noRek: "3101632", namaBank: "BNI", alamat: "43103 Waino Shoals Suite 785\nElectashire, TN 06756", kodePos: "52476", "kecamatan": "mouth", kota: "Port Rettabury", propinsi: "Iowa" }
     // );
 
     /*********************************************/
     // Insert Requester //
     /*********************************************/
     // var requesterRef = ref.child('requester');
-    // requesterRef.push(
-    //     { id_pengguna: 8, actRequester: 1 }
-    //
+    ref.child('requester/-LQ9nbqbnk9T5cFawsXI').update(
+        { id_pengguna: "-LR1Vr_2Far7Xl5ll2dt",
+            actRequester :
+                {
+                    "-LQC5XbVXTCUyoRudHN8" : true,
+                    "-LQC5Xbd8OfrpATaGr9I" : true
+                }
+        }
+    );
+    // ref.child('requester/-LQ9nbqk-ng0VTl7y3Bu').update(
+    //     { id_pengguna: "-LR1Vr_2Far7Xl5ll2du",
+    //         actRequester :
+    //             {
+    //                 act1 : "-LQC5XbeOIQV5s6n8-2J",
+    //                 act2 : "-LQC5XbmvvTJNs3jx9MG"
+    //             },
+    //         transfer : {
+    //             trf1 : "-LR1F9xObmSE8lj4pj5f",
+    //             trf2 : "-LR1F9xRoMGeorLKtJuK",
+    //             trf3 : "-LR1F9xSy_3aqmLkXWbI"
+    //         }
+    //     }
     // );
-    // requesterRef.push(
-    //     { id_pengguna: 11, actRequester: 2 }
-    //
+    // ref.child('requester/-LQ9nbqldqREBKZy7ll2').update(
+    //     { id_pengguna: "-LR1Vr_3QjwWvzt2aJ9J",
+    //         actRequester :
+    //             {
+    //                 act1 : "-LQC5XblzJfDR3OswLAF",
+    //             },
+    //         transfer : {
+    //             trf1 : "-LR1F9xRoMGeorLKtJuJ",
+    //             trf2 : "-LR1F9xSy_3aqmLkXWbH",
+    //             trf3 : "-LR1F9xTFZLRtI8FZizA"
+    //         }
+    //     }
     // );
-    // requesterRef.push(
-    //     { id_pengguna: 12, actRequester: 4 }
-    //
+    // ref.child('requester/-LQ9nbqmDhwkgiZymjLt').update(
+    //     { id_pengguna: "-LR1VrZvZ_yzuKfIrAUx", actRequester: null}
     // );
-    // requesterRef.push(
-    //     { id_pengguna: 15, actRequester: 5 }
-    // );
-    // requesterRef.push(
-    //     { id_pengguna: 9, actRequester: 3 }
+    // ref.child('requester/-LQ9nbqmDhwkgiZymjLu').update(
+    //     { id_pengguna: "-LR1Vr_-RyHAWcn4gJw5", actRequester: null}
     // );
 
     /*********************************************/
     // Insert Traveller //
     /*********************************************/
     // var travellerRef = ref.child('traveller');
-    // travellerRef.push(
-    //     {id_pengguna: 7, actTraveller: 2}
+    // ref.child('traveller/-LQ9ookXEz9IHzJg6IXI').update(
+    //     {id_pengguna: "-LR1Vr_0XdFMVNgSUduy",
+    //         actTraveller :
+    //                 {
+    //                     act1 : "-LQC2Cx-Ef2_bY_pcIcV",
+    //                     act2 : "-LQC2CxDwVbc1djcAJ2W",
+    //                     act3 : "-LQC2CxDwVbc1djcAJ2X"
+    //                 }
+    //     }
     // );
-    // travellerRef.push(
-    //     {id_pengguna: 15, actTraveller: 5}
+    // ref.child('traveller/-LQ9ookfTlKr6JBSLjmk').update(
+    //     {id_pengguna: "-LR1Vr_0XdFMVNgSUduz",
+    //         actTraveller :
+    //             {
+    //                 act1 : "-LQC2Cx9OPpaVIDmglWA",
+    //                 act2 : "-LQC2CxDwVbc1djcAJ2Y"
+    //             },
+    //         titipBarang :
+    //             {
+    //                 brg1 : "a132f2ce-0ece-478c-85a8-72cf6a889967"
+    //             },
+    //         pengiriman :
+    //             {
+    //                 kirim1 : "-LQOTtN9AwkO2WHstZ92"
+    //             },
+    //         receive :
+    //             {
+    //                 receive1 : "-LR1I6DOw_1VlKF1RdMf"
+    //             }
+    //
+    //
+    //     }
     // );
-    // travellerRef.push(
-    //     {id_pengguna: 11, actTraveller: 3}
+    // ref.child('traveller/-LQ9ookgFdTM_r0axBPi').update(
+    //     {id_pengguna: "-LR1Vr_0XdFMVNgSUdv-",
+    //         actTraveller :
+    //             {
+    //                 act1 : "-LQC2CxBBWpCBsPz4IhP",
+    //                 act2 : "-LQC2CxDwVbc1djcAJ2Z"
+    //             },
+    //         titipBarang :
+    //             {
+    //                 brg1 : "e63bd478-22d8-41c7-83bc-27bdd3a7927e"
+    //             },
+    //         pengiriman :
+    //             {
+    //                 kirim1 : "-LQOTtNJyjnYKny-94T4"
+    //             },
+    //         receive :
+    //             {
+    //                 receive1 : "--LR1I6DY3Z_Q6_jerIzp",
+    //                 receive2 : "-LR1I6DaDJyFWYFoXubM"
+    //             }
+    //     }
     // );
-    // travellerRef.push(
-    //     {id_pengguna: 14, actTraveller: 1}
+    // ref.child('traveller/-LQ9ookheboCgMGDgphE').update(
+    //     {id_pengguna: "-LR1Vr_2Far7Xl5ll2dr",
+    //         actTraveller :
+    //             {
+    //                 act1 : "-LQC2CxCvz_ijtX2gvNg",
+    //                 act2 : "-LQC2CxFmOo_5UOJOmlR"
+    //             }
+    //     }
     // );
-    // travellerRef.push(
-    //     {id_pengguna: 8, actTraveller: 4}
+    // ref.child('traveller/-LQ9ookiA9R5VyiIrwUN').update(
+    //     {id_pengguna: "-LR1Vr_2Far7Xl5ll2ds",
+    //         actTraveller :
+    //             {
+    //                 act1 : "-LQC2CxCvz_ijtX2gvNh",
+    //             }
+    //     }
     // );
 
     /*********************************************/
@@ -191,20 +272,27 @@
     // var barangRef = ref.child('barang');
     //
     // barangRef.push(
-    //     { idPengguna:3, nama: "Barang Jaskolski", unit: 2, deskripsi: "Excepturi ut magni possimus atque. At asperiores et velit in quo rerum maiores. Soluta iste nihil odit expedita expedita natus magni.", statusPecahBelah: "Tidak", berat: 1, harga: 93814.0, panjang: 40, lebar: 35, foto: "68747470733A2F2F6C6F72656D706978656C2E636F6D2F3634302F3438302F3F32313039...", kodeBarang: "Ready Stock"}
+    //     { idRequester:3, nama: "Barang Jaskolski", unit: 2, deskripsi: "Excepturi ut magni possimus atque. At asperiores et velit in quo rerum maiores. Soluta iste nihil odit expedita expedita natus magni.", statusPecahBelah: "Tidak", berat: 1, harga: 93814.0, panjang: 40, lebar: 35, foto: "68747470733A2F2F6C6F72656D706978656C2E636F6D2F3634302F3438302F3F32313039...", kodeBarang: "Ready Stock"}
     //
     // );
     // barangRef.push(
-    //     { idPengguna:6,  nama: "Barang Legros", unit: 1, deskripsi: "Aspernatur quas ipsum praesentium occaecati. Quia alias hic ipsa sit ut asperiores. Expedita sint rerum aperiam placeat rerum.", statusPecahBelah: "Ya", berat: 1, harga: 71737.0, panjang: 44, lebar: 70, foto: "68747470733A2F2F6C6F72656D706978656C2E636F6D2F3634302F3438302F3F33333835...", kodeBarang: "Request", }
+    //     { idRequester:6,  nama: "Barang Legros", unit: 1, deskripsi: "Aspernatur quas ipsum praesentium occaecati. Quia alias hic ipsa sit ut asperiores. Expedita sint rerum aperiam placeat rerum.", statusPecahBelah: "Ya", berat: 1, harga: 71737.0, panjang: 44, lebar: 70, foto: "68747470733A2F2F6C6F72656D706978656C2E636F6D2F3634302F3438302F3F33333835...", kodeBarang: "Request", }
     // );
     // barangRef.push(
-    //     { idPengguna:8, nama: "Barang abc", unit: 3, deskripsi: "Sapiente aut repellat magnam in est. Sint accusamus tempora quas aut cupiditate quidem. Occaecati incidunt assumenda at. Sunt quam nihil nisi eius rerum ea.", statusPecahBelah: "Ya", berat: 2, harga: 106198.0, panjang: 93, "lebar": 39, "foto": "68747470733A2F2F6C6F72656D706978656C2E636F6D2F3634302F3438302F3F37353636...", kodeBarang: "Request" }
+    //     { idRequester:8, nama: "Barang abc", unit: 3, deskripsi: "Sapiente aut repellat magnam in est. Sint accusamus tempora quas aut cupiditate quidem. Occaecati incidunt assumenda at. Sunt quam nihil nisi eius rerum ea.", statusPecahBelah: "Ya", berat: 2, harga: 106198.0, panjang: 93, "lebar": 39, "foto": "68747470733A2F2F6C6F72656D706978656C2E636F6D2F3634302F3438302F3F37353636...", kodeBarang: "Request" }
     // );
     // barangRef.push(
-    //     { idPengguna:11, nama: "Barang erd", unit: 3, deskripsi: "Enim consequuntur dolor vel dolores eaque dicta est ea. Voluptatem non occaecati laudantium recusandae eos aliquam. Cupiditate est voluptatem quia quis eveniet ab alias.", statusPecahBelah: "Tidak", berat: 4, harga: 192619.0, panjang: 26, "lebar": 48, "foto": "68747470733A2F2F6C6F72656D706978656C2E636F6D2F3634302F3438302F3F35393837...", kodeBarang: "Pre Order" }
+    //     { idRequester:11, nama: "Barang erd", unit: 3, deskripsi: "Enim consequuntur dolor vel dolores eaque dicta est ea. Voluptatem non occaecati laudantium recusandae eos aliquam. Cupiditate est voluptatem quia quis eveniet ab alias.", statusPecahBelah: "Tidak", berat: 4, harga: 192619.0, panjang: 26, "lebar": 48, "foto": "68747470733A2F2F6C6F72656D706978656C2E636F6D2F3634302F3438302F3F35393837...", kodeBarang: "Pre Order" }
     // );
     // barangRef.push(
-    //     { idPengguna:12, nama: "Barang ruqi", unit: 1, deskripsi: "Tempore veritatis aut voluptas quia qui cum. Quia et doloremque autem maiores velit modi minus fugit. Dignissimos et aut earum deserunt.", statusPecahBelah: "Ya", berat: 1, harga: 97980.0, panjang: 85, "lebar": 95, "foto": "68747470733A2F2F6C6F72656D706978656C2E636F6D2F3634302F3438302F3F39343133...", kodeBarang: "Pre Order" }
+    //     { idRequester:12, nama: "Barang ruqi", unit: 1, deskripsi: "Tempore veritatis aut voluptas quia qui cum. Quia et doloremque autem maiores velit modi minus fugit. Dignissimos et aut earum deserunt.", statusPecahBelah: "Ya", berat: 1, harga: 97980.0, panjang: 85, "lebar": 95, "foto": "68747470733A2F2F6C6F72656D706978656C2E636F6D2F3634302F3438302F3F39343133...", kodeBarang: "Pre Order" }
+    // );
+    // update idBarang //
+    // ref.child('requester/-LQ9nbqbnk9T5cFawsXI/barang').update(
+    //     {id_barang : "a132f2ce-0ece-478c-85a8-72cf6a889967"}
+    // );
+    // ref.child('requester/-LQ9nbqk-ng0VTl7y3Bu/barang').update(
+    //     {id_barang : "e63bd478-22d8-41c7-83bc-27bdd3a7927e"}
     // );
 
     /*********************************************/
@@ -318,4 +406,32 @@
     //     { idBeli:2, isiReview : "Pengiriman baik, barang baik", bintang:3 }
     // );
 
+
+    /*********************************************/
+    // Insert Transfer //
+    /*********************************************/
+    // var transfer = ref.child('transfer')
+    // transfer.push(
+    //     { idRequester:null, waktu:firebase.database.ServerValue.TIMESTAMP, jumlah:150000, buktiPembayaran:null, status: "tunggu verifikasi"}
+    // );
+    // transfer.push(
+    //     { idRequester:null, waktu:firebase.database.ServerValue.TIMESTAMP, jumlah:170000, buktiPembayaran:null, status: "sudah verifikasi"}
+    // );
+    // transfer.push(
+    //     { idRequester:null, waktu:firebase.database.ServerValue.TIMESTAMP, jumlah:180000, buktiPembayaran:null, status: "tunggu verifikasi"}
+    // );
+
+    /*********************************************/
+    // Insert Transfer //
+    /*********************************************/
+    // var receive = ref.child('receive')
+    // receive.push(
+    //     { idTraveller:1, waktu:firebase.database.ServerValue.TIMESTAMP, jumlah:150000,  status: "proses verifikasi"}
+    // );
+    // receive.push(
+    //     { idTraveller:null, waktu:firebase.database.ServerValue.TIMESTAMP, jumlah:170000,  status: "sudah ditransfer"}
+    // );
+    // receive.push(
+    //     { idTraveller:null, waktu:firebase.database.ServerValue.TIMESTAMP, jumlah:180000,  status: "proses verifikasi"}
+    // );
 </script>
