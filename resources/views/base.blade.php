@@ -66,15 +66,15 @@
                     <li><a href="/act_traveller">Aktifitas Traveller</a></li>
                 </ul>
             </li>
-            <li><a href="/barang">Data Barang</a></li>
-            <li><a href="#">Transaksi &nbsp<i class="fa fa-caret-right" aria-hidden="true"></i></a>
+            <li><a href="#">Barang &nbsp<i class="fa fa-caret-right" aria-hidden="true"></i></a>
                 <ul class="dropdown">
-                    <a href="/post_rq">Cek Post Baru</a>
+                    <li><a href="/barang">Data Barang</a></li>
+                    <li><a href="/post_rq">Konfirmasi Post Barang</a></li>
                 </ul>
             </li>
             <li><a href="#">Keuangan &nbsp<i class="fa fa-caret-right" aria-hidden="true"></i></a>
                 <ul class="dropdown">
-                    <li>Cek Transfer</li>
+                    <li><a href="/transfer">Cek Transfer</a></li>
                     <li>Cek Receive</li>
                 </ul>
             </li>

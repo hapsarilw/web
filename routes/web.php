@@ -11,11 +11,26 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/home', function () {
+    return view('index');
+});
+Route::get('/login', function () {
     return view('login');
 });
 Route::get('/halaman-kedua', function () {
     return view('halamandua');
+});
+Route::get('/transfer', function () {
+    return view('transfer');
+});
+Route::get('/receive', function () {
+    return view('receive');
+});
+Route::get('/postStatus', function () {
+    return view('postStatus');
+});
+Route::get('/show_barang', function () {
+    return view('show_barang');
 });
 
 //ROUTE LOGIN REGISTER DAN LOGOUT
@@ -30,7 +45,7 @@ Route::resource('barang','Barang');
 Route::resource('user','User');
 Route::resource('tb_user','TbUser');
 Route::resource('post_rq','PostRQ');
-Route::resource('transfer','Transfer');
+//Route::resource('transfer','Transfer');
 Route::resource('traveller','Traveller');
 Route::resource('act_traveller','ActTraveller');
 Route::resource('requester','Requester');

@@ -146,15 +146,15 @@
     // Insert Requester //
     /*********************************************/
     // var requesterRef = ref.child('requester');
-    ref.child('requester/-LQ9nbqbnk9T5cFawsXI').update(
-        { id_pengguna: "-LR1Vr_2Far7Xl5ll2dt",
-            actRequester :
-                {
-                    "-LQC5XbVXTCUyoRudHN8" : true,
-                    "-LQC5Xbd8OfrpATaGr9I" : true
-                }
-        }
-    );
+    // ref.child('requester/-LQ9nbqbnk9T5cFawsXI').update(
+    //     { id_pengguna: "-LR1Vr_2Far7Xl5ll2dt",
+    //         actRequester :
+    //             {
+    //                 "-LQC5XbVXTCUyoRudHN8" : true,
+    //                 "-LQC5Xbd8OfrpATaGr9I" : true
+    //             }
+    //     }
+    // );
     // ref.child('requester/-LQ9nbqk-ng0VTl7y3Bu').update(
     //     { id_pengguna: "-LR1Vr_2Far7Xl5ll2du",
     //         actRequester :
@@ -411,7 +411,7 @@
     // Insert Transfer //
     /*********************************************/
     // var transfer = ref.child('transfer')
-    // transfer.push(
+    // ref.child('traveller/-LQ9ookheboCgMGDgphE').update(
     //     { idRequester:null, waktu:firebase.database.ServerValue.TIMESTAMP, jumlah:150000, buktiPembayaran:null, status: "tunggu verifikasi"}
     // );
     // transfer.push(
@@ -433,5 +433,64 @@
     // );
     // receive.push(
     //     { idTraveller:null, waktu:firebase.database.ServerValue.TIMESTAMP, jumlah:180000,  status: "proses verifikasi"}
+    // );
+
+    /*********************************************/
+    // Insert POSTRQ //
+    /*********************************************/
+    // var post = ref.child('post_rq')
+    // post.push(
+    //     { idBarang:"4bbd6399-31a8-43bc-99e5-3f3ee2adde20", waktu:firebase.database.ServerValue.TIMESTAMP, status: "tunggu persetujuan flynbuy"}
+    // );
+
+    /*********************************************/
+    // Update POSTRQ //
+    /*********************************************/
+    // ref.child('post_rq/32a205ae-e635-48d5-a17b-774c5c0a1b2f').set(
+    //     {
+    //         statusPost : "belum disetujui",
+    //         waktuPost : Date()}
+    // );
+    // ref.child('post_rq/485d4c84-fd1f-4015-a981-eaab6f3b1402').set(
+    //     {statusPost : "belum disetujui",waktuPost : Date()}
+    // );
+    // ref.child('post_rq/4bbd6399-31a8-43bc-99e5-3f3ee2adde20').set(
+    //     {statusPost : "belum disetujui",waktuPost : Date()}
+    // );
+    // ref.child('post_rq/77556f71-571a-4db1-8b8d-16545b5227c3').set(
+    //     {
+    //         statusPost : "belum disetujui",
+    //         waktuPost : Date()}
+    // );
+    // ref.child('post_rq/807cd952-7256-4417-8ead-303033171285').set(
+    //     {statusPost : "belum disetujui",waktuPost : Date()}
+    // );
+    // ref.child('post_rq/9d7cd085-f911-49ca-92a1-f00184f537a0').set(
+    //     {statusPost : "belum disetujui",waktuPost : Date()}
+    // );
+    // ref.child('post_rq/a41b38f7-463f-499f-ac4a-25541749f4b6').set(
+    //     {
+    //         statusPost : "belum disetujui",
+    //         waktuPost : Date()}
+    // );
+    // ref.child('post_rq/a6fc3d6c-beb3-488e-aff4-305634cacdc0').set(
+    //     {statusPost : "belum disetujui",waktuPost : Date()}
+    // );
+    // ref.child('post_rq/baa74761-2f80-4c24-9e43-5d8799ac535f').set(
+    //     {statusPost : "belum disetujui",waktuPost : Date()}
+    // );
+    // ref.child('post_rq/cc036ba0-f119-477e-ad34-88d791177630').set(
+    //     {
+    //         statusPost : "belum disetujui",
+    //         waktuPost : Date()}
+    // );
+    // ref.child('post_rq/e9e013e1-402d-417b-9ae9-f80ed1434476').set(
+    //     {statusPost : "belum disetujui",waktuPost : Date()}
+    // );
+    // ref.child('post_rq/edf5105b-6650-4531-9b0f-6132b43b76db').set(
+    //     {statusPost : "belum disetujui",waktuPost : Date()}
+    // );
+    // ref.child('post_rq/f499e6d7-aa21-4d34-a1c4-69029b9f5bd3').set(
+    //     {statusPost : "belum disetujui",waktuPost : Date()}
     // );
 </script>
