@@ -169,19 +169,33 @@
     //         }
     //     }
     // );
-    // ref.child('requester/-LQ9nbqldqREBKZy7ll2').update(
-    //     { id_pengguna: "-LR1Vr_3QjwWvzt2aJ9J",
-    //         actRequester :
-    //             {
-    //                 act1 : "-LQC5XblzJfDR3OswLAF",
-    //             },
-    //         transfer : {
-    //             trf1 : "-LR1F9xRoMGeorLKtJuJ",
-    //             trf2 : "-LR1F9xSy_3aqmLkXWbH",
-    //             trf3 : "-LR1F9xTFZLRtI8FZizA"
-    //         }
-    //     }
-    // );
+    ref.child('requester/-LQ9nbqk-ng0VTl7y3Bu').update(
+        { id_pengguna: "-LR1Vr_2Far7Xl5ll2du",
+            actRequester :
+                {
+                     "-LQC5XbeOIQV5s6n8-2J" : true,
+                     "-LQC5XbmvvTJNs3jx9MG" : true
+                },
+            transfer : {
+                "-LR1F9xObmSE8lj4pj5f":true,
+                "-LR1F9xRoMGeorLKtJuK":true,
+                "-LR1F9xSy_3aqmLkXWbI":true
+            }
+        }
+    );
+    ref.child('requester/-LQ9nbqldqREBKZy7ll2').update(
+        { id_pengguna: "-LR1Vr_3QjwWvzt2aJ9J",
+            actRequester :
+                {
+                    "-LQC5XblzJfDR3OswLAF":true,
+                },
+            transfer : {
+                "-LR1F9xRoMGeorLKtJuJ":true,
+                "-LR1F9xSy_3aqmLkXWbH":true,
+                "-LR1F9xTFZLRtI8FZizA":true
+            }
+        }
+    );
     // ref.child('requester/-LQ9nbqmDhwkgiZymjLt').update(
     //     { id_pengguna: "-LR1VrZvZ_yzuKfIrAUx", actRequester: null}
     // );
@@ -271,6 +285,23 @@
     /*********************************************/
     // var barangRef = ref.child('barang');
     //
+    // ref.child('barang/07b073c8-319b-4adb-8c9d-546e09ae4be1').update(
+    //     {
+    //         berat : 2,
+    //         biayaAdmin : 25000,
+    //         deskripsi : "Excepturi ut magni possimus atque. At asperiores et velit in quo rerum maiores. Soluta iste nihil odit expedita expedita natus magni.",
+    //         harga : 100000,
+    //         idBarang : "07b073c8-319b-4adb-8c9d-546e09ae4be1",
+    //         idUploader : "WJ4ISaws1ncYyIUMbrJd5RgEenk2",
+    //         imageURL : "fotoBarang/07b073c8-319b-4adb-8c9d-546e09ae4be1",
+    //         lebar : 50,
+    //         namaBarang : "capture",
+    //         panjang : 50,
+    //         statusBarang : "Belum Disetujui",
+    //         statusPecahBelah : "Ya",
+    //         unit: "5",
+    //     }
+    // );
     // barangRef.push(
     //     { idRequester:3, nama: "Barang Jaskolski", unit: 2, deskripsi: "Excepturi ut magni possimus atque. At asperiores et velit in quo rerum maiores. Soluta iste nihil odit expedita expedita natus magni.", statusPecahBelah: "Tidak", berat: 1, harga: 93814.0, panjang: 40, lebar: 35, foto: "68747470733A2F2F6C6F72656D706978656C2E636F6D2F3634302F3438302F3F32313039...", kodeBarang: "Ready Stock"}
     //
@@ -288,11 +319,11 @@
     //     { idRequester:12, nama: "Barang ruqi", unit: 1, deskripsi: "Tempore veritatis aut voluptas quia qui cum. Quia et doloremque autem maiores velit modi minus fugit. Dignissimos et aut earum deserunt.", statusPecahBelah: "Ya", berat: 1, harga: 97980.0, panjang: 85, "lebar": 95, "foto": "68747470733A2F2F6C6F72656D706978656C2E636F6D2F3634302F3438302F3F39343133...", kodeBarang: "Pre Order" }
     // );
     // update idBarang //
-    // ref.child('requester/-LQ9nbqbnk9T5cFawsXI/barang').update(
-    //     {id_barang : "a132f2ce-0ece-478c-85a8-72cf6a889967"}
+    // ref.child('barang/0b6f9ba7-dc1d-4c8f-8fa5-9c49327676a7').update(
+    //     {idTransaksi:"-LSRbI9GsU7ke3UzwFSX"}
     // );
-    // ref.child('requester/-LQ9nbqk-ng0VTl7y3Bu/barang').update(
-    //     {id_barang : "e63bd478-22d8-41c7-83bc-27bdd3a7927e"}
+    // ref.child('barang/2f8a6bfc-93be-47d2-9e83-864606afcc3e').update(
+    //     {idTransaksi:"-LSRbI9I0o6qo4JJ_9rI"}
     // );
 
     /*********************************************/
@@ -410,10 +441,12 @@
     /*********************************************/
     // Insert Transfer //
     /*********************************************/
-    // var transfer = ref.child('transfer')
-    // ref.child('traveller/-LQ9ookheboCgMGDgphE').update(
-    //     { idRequester:null, waktu:firebase.database.ServerValue.TIMESTAMP, jumlah:150000, buktiPembayaran:null, status: "tunggu verifikasi"}
-    // );
+    //var transfer = ref.child('transfer')
+    // firebase.database().ref('transfer/-LR1F9xRoMGeorLKtJuJ').update({ buktiBayar : 'fotoBuktiBayar/trf1.jpg' });
+    // firebase.database().ref('transfer/-LR1F9xRoMGeorLKtJuK').update({ buktiBayar : 'fotoBuktiBayar/trf2.jpg' });
+    // firebase.database().ref('transfer/-LR1F9xSy_3aqmLkXWbH').update({ buktiBayar : 'fotoBuktiBayar/trf3.jpg' });
+    // firebase.database().ref('transfer/-LR1F9xSy_3aqmLkXWbI').update({ buktiBayar : 'fotoBuktiBayar/trf4.jpg' });
+    // firebase.database().ref('transfer/-LR1F9xTFZLRtI8FZizA').update({ buktiBayar : 'fotoBuktiBayar/trf5.jpeg' });
     // transfer.push(
     //     { idRequester:null, waktu:firebase.database.ServerValue.TIMESTAMP, jumlah:170000, buktiPembayaran:null, status: "sudah verifikasi"}
     // );
@@ -422,7 +455,7 @@
     // );
 
     /*********************************************/
-    // Insert Transfer //
+    // Insert Receive//
     /*********************************************/
     // var receive = ref.child('receive')
     // receive.push(
@@ -493,4 +526,16 @@
     // ref.child('post_rq/f499e6d7-aa21-4d34-a1c4-69029b9f5bd3').set(
     //     {statusPost : "belum disetujui",waktuPost : Date()}
     // );
+
+    /*********************************************/
+    // Insert Transaksi //
+    /*********************************************/
+    // var transaksiRef = ref.child('transaksi');
+    // transaksiRef.push(
+    //     { idPost: "07b073c8-319b-4adb-8c9d-546e09ae4be1", traveller: "-LQ9ookXEz9IHzJg6IXI", requester: "-LQ9nbqbnk9T5cFawsXI", statusTransaksi: "proses input resi", statusTransfer:"-LR1F9xRoMGeorLKtJuJ" ,statusReceive:"-LR1I6DOw_1VlKF1RdMf", noResi:"belum ada"}
+    // );
+    // transaksiRef.push(
+    //     { idPost: "0b6f9ba7-dc1d-4c8f-8fa5-9c49327676a7", traveller: "-LQ9ookfTlKr6JBSLjmk", requester: "-LQ9nbqk-ng0VTl7y3Bu", statusTransaksi: "proses pengiriman", statusTransfer:"-LR1F9xRoMGeorLKtJuJ" ,statusReceive:"-LR1I6DOw_1VlKF1RdMf", noResi:"CGKY202803413516"}
+    // );
+
 </script>

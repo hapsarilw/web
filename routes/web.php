@@ -32,6 +32,9 @@ Route::get('/postStatus', function () {
 Route::get('/show_barang', function () {
     return view('show_barang');
 });
+Route::get('/transaksi', function () {
+    return view('transaksi');
+});
 
 //ROUTE LOGIN REGISTER DAN LOGOUT
 Route::get('/home_user', 'User@index');

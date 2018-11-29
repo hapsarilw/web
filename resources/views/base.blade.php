@@ -71,11 +71,11 @@
                     <li><a href="/barang">Data Barang</a></li>
                     <li><a href="/post_rq">Konfirmasi Post Barang</a></li>
                 </ul>
-            </li>
+            </li>i
             <li><a href="#">Keuangan &nbsp<i class="fa fa-caret-right" aria-hidden="true"></i></a>
                 <ul class="dropdown">
                     <li><a href="/transfer">Cek Transfer</a></li>
-                    <li>Cek Receive</li>
+                    <li><a href="/receive">Cek Receive</a></li>
                 </ul>
             </li>
             <li><a href="#">Customer Service &nbsp<i class="fa fa-caret-right" aria-hidden="true"></i></a>

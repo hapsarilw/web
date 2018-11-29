@@ -43,7 +43,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default waves-effect update-data-from-delete-form" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-success waves-effect waves-light updateUserRecord">Update</button>
+                        <button type="button" class="btn btn-success waves-effect waves-light updateStatusRecord">Update</button>
                     </div>
                 </div>
             </div>
@@ -112,23 +112,12 @@
                 var values = snapshot.val();
                 var updateData =
                     '<div class="form-group">\
-                        <label for="first_name" class="col-md-12 col-form-label">ID</label>\
+                        <label for="post status" class="col-md-12 col-form-label">Verifikasi Pembayaran</label>\
+                        <p>'+values.status+'</p>\
                         <div class="col-md-12">\
-                            <input id="last_name" type="text" class="form-control" name="last_name" value="'+index+'" required autofocus>\
-                        </div>\
-                        <label for="first_name" class="col-md-12 col-form-label">Waktu</label>\
-                        <div class="col-md-12">\
-                            <input id="last_name" type="text" class="form-control" name="last_name" value="'+values.waktu+'" required autofocus>\
-                        </div>\
-                        <label for="first_name" class="col-md-12 col-form-label">Jumlah</label>\
-                        <div class="col-md-12">\
-                            <input id="last_name" type="text" class="form-control" name="last_name" value="'+values.jumlah+'" required autofocus>\
-                        </div>\
-                        <label for="status" class="col-md-12 col-form-label">Pilih Status</label>\
-                        <div class="col-md-12">\
-                            <select class=" pilih_status" id="pilihStatus">\
-                                <option value=Setujui Pembayaran>Setujui Pembayaran</option>\
-                                <option value=Tolak Pembayaran>Tolak Pembayaran</option>\
+                            <select class=" form-control" id="statusBayar">\
+                                <option value="Uang sudah Dikirim">Uang sudah Dikirim</option>\
+                                <option value="Uang gagal Dikirim">Uang gagal Dikirim</option>\
                             </select>\
                         </div>\
                     </div>\
@@ -136,25 +125,12 @@
 
                 $('#updateBody').html(updateData);
             });
-
         });
-
-        $('.updateUserRecord').on('click', function() {
-            var values = $(".users-update-record-model").serializeArray();
-
-            var e = document.getElementById("pilihStatus");
+        $('.updateStatusRecord').on('click', function() {
+            var e = document.getElementById("statusBayar");
             var pilihan = e.options[e.selectedIndex].value;
 
-            var postData = {
-                waktu : values[1].value,
-                jumlah : values[2].value,
-                status : pilihan,
-            };
-
-            var updates = {};
-            updates['/receive/' + updateID ] = postData;
-
-            firebase.database().ref().update(updates);
+            firebase.database().ref('/receive/' + updateID).update({ status: pilihan });
 
             $("#update-modal").modal('hide');
         });

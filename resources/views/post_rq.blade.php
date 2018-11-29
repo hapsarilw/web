@@ -19,7 +19,7 @@
                     <th>No.</th>
                     <th>Link Barang</th>
                     <th>Status Post</th>
-                    <th>Tanggal Post</th>
+                    <th>Waktu Persetujuan</th>
                     <th>Aksi</th>
                 </tr>
                 </thead>
@@ -98,7 +98,7 @@
                 <td>'+ $i++ +'</td>\
         		<td><button type="button" class="btn btn-info btn-lg readBarang" data-toggle="modal" data-id="'+index+'" data-target="#read-modal">Data Barang</button></td>\
         		<td>'+ value.statusPost +'</td>\
-        		<td>'+ value.waktuPost +'</td>\
+        		<td>'+ value.waktuPostDisetujui +'</td>\
         		<td><button type="button" class="btn btn-info btn-lg updateData" data-toggle="modal" data-id="'+index+'" data-target="#update-modal">Ubah Status</button></td>\
         	</tr>');
                 }
@@ -119,7 +119,7 @@
                     '<div class="form-group">\
                        <label for="last_name" class="col-md-12 col-form-label">Tgl Upload Post</label>\
                         <div class="col-md-12">\
-                            <input id="waktuPost" type="text" class="form-control" name="waktu" value="'+values.waktuPost+'" disabled required autofocus>\
+                            <input id="waktuPost" type="text" class="form-control" name="waktu" value="'+values.waktuPostDisetujui+'" disabled required autofocus>\
                         </div>\
                     </div>\
                     <div class="form-group">\
@@ -145,14 +145,23 @@
             var status = e.options[e.selectedIndex].value;
 
             var postData = {
-                waktuPost : Date(),
+                waktuPostDisetujui : Date(),
                 statusPost : status,
+            };
+
+            var postData2 = {
+                statusBarang : status,
             };
 
             var updates = {};
             updates['/post_rq/' + updateID] = postData;
 
+            var updates2 = {};
+            updates2['/barang/' + updateID] = postData2;
+
+
             firebase.database().ref().update(updates);
+            firebase.database().ref('/barang/' + updateID).update({ statusBarang : status });
 
             $("#update-modal").modal('hide');
         });
@@ -166,14 +175,15 @@
                 var readBarang =
                     '<div class="row">\
                         <div class="col-xs-4">\
-                            <img id="imgBarang" height="350px" width="auto"/>\
+                            <img width=300px length=auto alt="foto barang"> \
                         </div>\
                         <div class="col-xs-5" style="border:0px solid gray">\
                             <h3>'+values1.namaBarang+'</h3>\
                             <h6 class="title-price"><small>Harga</small></h6>\
-                            <h3 style="margin-top:0px;">Rp 1.000.000,00</h3>\
+                            <h3 style="margin-top:0px;">Rp '+values1.harga+'</h3>\
                         <div class="section">\
-                            <h6 class="title-attr" style="margin-top:15px;" ><small>Warna</small></h6>\
+                            <h6 class="title-attr" style="margin-top:15px;" ><small>Berat</small></h6>\
+                            <h3 style="margin-top:0px;">'+values1.berat+' kg</h3>\
                         <div>\
                         <h4>Kuning</h4>\
                     </div>\
@@ -185,37 +195,35 @@
                 </div>\
                 </div>\
                     <div class="section" style="padding-bottom:20px;">\
-                    <button class="btn btn-success disabled"><span style="margin-right:20px" class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Status Post Barang</button>\
+                    <button class="btn btn-success disabled"><span style="margin-right:20px" class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Status Saat Ini : '+values1.statusBarang+'</button>\
                 </div>\
                 </div>\
                 <div class="col-xs-9">\
-                    <ul class="menu-items">\
-                    <li class="active">Detail Produk</li>\
-                </ul>\
                 <div style="width:100%;border-top:1px solid silver">\
                     <p style="padding:15px;">\
                     <small>\
-                    Detail Barang\
+                    Panjang : '+values1.panjang+'<br>\
+                    Lebar : '+values1.lebar+'\
                 </small>\
                 </p>\
                 <small>\
                 <ul>\
-                <li>Detail Barang</li>\
+                <li><p>'+values1.deskripsi+'</p>\\</li>\
                 </ul>\
                 </small>\
                 </div>\
                 </div>\
                 </div>\
 		            ';
+                firebase.storage().ref(values1.imageURL).getDownloadURL().then(function(url)                             {
+                    document.querySelector('img').src = url;
 
+                }).catch(function(error) {
+                    console.error(error);
+                });
+                $('#readBody').html(readBarang);
             });
-            var uploadTask = storageRef.child('barang/' + file.name).put(file, metadata);
-            uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
-                console.log('File available at', downloadURL);
-            });
-
         });
-
 
     </script>
 @endsection
